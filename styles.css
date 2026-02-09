@@ -16,6 +16,10 @@ body{
   line-height:1.45;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .container{
   width:min(980px, 92vw);
   margin:0 auto;
@@ -34,8 +38,8 @@ body{
 }
 
 .brand{
-  font-weight:700;
-  letter-spacing:0.2px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav a{
@@ -72,8 +76,7 @@ body{
 }
 
 .section{
-  padding:46px 0;
-  border-bottom:1px solid var(--line);
+  scroll-margin-top: 90px;
 }
 
 .section h2{
