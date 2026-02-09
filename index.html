@@ -8,16 +8,20 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
+
 <body>
+  <div id="top"></div>
+
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">Aurum Equity LLC</div>
-      <!--NAVIGATION--!>
+      <a class="brand" href="#top">Aurum Equity LLC</a>
+
+      <!-- Navigation -->
       <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="#top">Home</a>
+        <a href="#services">Services</a>
+        <a href="#overview">About</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -29,7 +33,7 @@
         <p class="subhead">Technology Consulting and Systems Support</p>
         <p class="tagline">Supporting government and small business with reliable, practical technology solutions.</p>
         <a class="btn" href="#contact">Request Information</a>
-        <a class="btn secondary" href="services.html">View Services</a>
+        <a class="btn secondary" href="#services">View Services</a>
       </div>
     </section>
 
@@ -45,7 +49,7 @@
 
     <section class="section" id="services">
       <div class="container">
-        <h2>Services Technology Consulting Aurum Equity LLC</h2>
+        <h2>Services</h2>
 
         <div class="cards">
           <div class="card">
@@ -81,31 +85,50 @@
       </div>
     </section>
 
-<section class="section" id="overview">
-  <div class="container">
-    <h2>About Aurum Equity LLC</h2>
-    <p>
-      Aurum Equity LLC is a small business technology consulting firm providing systems support, integration services,
-      and modernization assistance. We focus on practical solutions, structured processes, and dependable delivery for
-      organizations requiring steady technical support.
-    </p>
+    <section class="section" id="overview">
+      <div class="container">
+        <h2>About Aurum Equity LLC</h2>
+        <p>
+          Aurum Equity LLC is a small business technology consulting firm providing systems support, integration services,
+          and modernization assistance. We focus on practical solutions, structured processes, and dependable delivery for
+          organizations requiring steady technical support.
+        </p>
 
-    <div style="text-align:center; margin-top:20px;">
-      <a class="btn secondary"
-         href="Aurum_Equity_Capability_Statement.pdf"
-         target="_blank"
-         rel="noopener">
-         Download Capability Statement (PDF, 40 KB)
-      </a>
-    </div>
-  </div>
-</section>
+        <div style="text-align:center; margin-top:20px;">
+          <a class="btn secondary"
+             href="Aurum_Equity_Capability_Statement.pdf"
+             target="_blank"
+             rel="noopener">
+            Download Capability Statement (PDF, 40 KB)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>For contracting and procurement inquiries, contact us using the information below.</p>
+
+        <p>
+          Email:
+          <a href="mailto:procurement@aurumequitylegacy.com">procurement@aurumequitylegacy.com</a>
+        </p>
+
+        <p>
+          Phone:
+          <a href="tel:+17032020088">(703) 202-0088</a>
+        </p>
+
+        <p>UEI: H2PBRHL3GT65</p>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>procurement@aurumequitylegacy.com</div>
-      <div>(703) 202-0088</div>
+      <div><a href="mailto:procurement@aurumequitylegacy.com">procurement@aurumequitylegacy.com</a></div>
+      <div><a href="tel:+17032020088">(703) 202-0088</a></div>
       <div>UEI: H2PBRHL3GT65</div>
       <div>© <span id="year"></span> Aurum Equity LLC</div>
     </div>
