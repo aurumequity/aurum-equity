@@ -37,7 +37,11 @@ html{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:16px 0;
+  padding:12px 0;
+}
+
+.nav{
+  flex: 0 0 auto;
 }
 
 .brand{
@@ -51,9 +55,12 @@ html{
   letter-spacing: 0.5px;
 }
 
-.logo {
-  height: 38px;
+.logo{
+  height: 44px;
   width: auto;
+  max-width: 280px;
+  object-fit: contain;
+  display: block;
   flex: 0 0 auto;
 }
 
