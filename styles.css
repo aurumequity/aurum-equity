@@ -44,6 +44,11 @@ html{
   flex: 0 0 auto;
 }
 
+.nav a[aria-current="page"] {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 .brand{
   display: flex;
   align-items: center;
@@ -215,6 +220,7 @@ html{
   justify-content:space-between;
   font-size:14px;
 }
+
 
 @media (max-width: 820px){
   .cards{ grid-template-columns: 1fr; }
