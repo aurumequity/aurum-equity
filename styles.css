@@ -150,6 +150,14 @@ html{
   border-radius:8px;
 }
 
+.card ul{
+  text-align:left;
+  margin: 10px auto 0 auto;
+  max-width: 520px;
+  color: var(--muted);
+  padding-left: 18px;
+}
+
 .icon{
   font-size:34px;
   margin-bottom:10px;
