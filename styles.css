@@ -175,42 +175,40 @@ h1 {
   gap: 14px;
 }
 
-.card p { margin: 0; color: var(--muted); line-height: 1.6; }
 
-.contact-grid .card {
-  min-height: 110px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.card a {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 500;
+  color: #5da9ff;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 
 .site-footer {
   position: relative;
   padding: 28px 0 44px;
-  border-top: 1px solid rgba(255,255,255,0.08);
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
 }
 
 .site-footer::before {
   content: "";
   position: absolute;
+  top: 0;
   left: 0;
   right: 0;
   height: 1px;
   background: rgba(255,255,255,0.06);
 }
-
-.footer-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.footer-brand { font-weight: 700; }
-.footer-meta { color: var(--muted2); font-size: 13px; margin-top: 6px; }
-.footer-links { display: flex; gap: 14px; color: var(--muted); font-size: 14px; }
 
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
