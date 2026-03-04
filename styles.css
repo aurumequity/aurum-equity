@@ -4,6 +4,9 @@
   --card: rgba(255,255,255,0.06);
   --card2: rgba(255,255,255,0.04);
   --border: rgba(255,255,255,0.12);
+  --gold: #c9a84c;
+  --gold-light: #e2c97a;
+  --gold-muted: rgba(201,168,76,0.15);
   --text: rgba(255,255,255,0.92);
   --muted: rgba(255,255,255,0.72);
   --muted2: rgba(255,255,255,0.58);
@@ -40,8 +43,8 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
 }
 
-  .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--white); letter-spacing: 0.04em; text-decoration: none; }
-  .logo span { color: var(--gold); }
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--white); letter-spacing: 0.04em; text-decoration: none; }
+.logo span { color: var(--gold); }
 
 
 .site-header {
