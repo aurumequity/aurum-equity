@@ -43,8 +43,8 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
 }
 
-.logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--white); letter-spacing: 0.04em; text-decoration: none; }
-.logo span { color: var(--gold); }
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #5da9ff; letter-spacing: 0.04em; text-decoration: none; }
+.logo span { color: #5da9ff; }
 
 
 .site-header {
@@ -218,8 +218,8 @@ h1 {
   padding: 2.5rem 0 1.5rem;
 }
 
-.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--white); letter-spacing: 0.04em; text-decoration: none; }
-.footer-logo span { color: var(--gold); }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #5da9ff; letter-spacing: 0.04em; text-decoration: none; }
+.footer-logo span { color: #5da9ff; }
 
 .footer-brand {
   display: block;
