@@ -30,6 +30,10 @@ a:hover { text-decoration: underline; }
   width: min(var(--container), calc(100% - 40px));
   margin: 0 auto;
 }
+.logo {
+  height: 32px;
+  width: auto;
+}
 
 .site-header {
   position: sticky;
