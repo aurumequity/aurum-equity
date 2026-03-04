@@ -40,11 +40,9 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
 }
 
-  .brand img.logo {
-    height: 36px;
-    width: auto;
-    display: block;
-  }
+  .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--white); letter-spacing: 0.04em; text-decoration: none; }
+  .logo span { color: var(--gold); }
+
 
 .site-header {
   position: sticky;
@@ -217,13 +215,8 @@ h1 {
   padding: 2.5rem 0 1.5rem;
 }
 
-.footer-logo {
-  height: 32px;
-  width: auto;
-  margin-bottom: 0.6rem;
-  display: block;
-  opacity: 0.85;
-}
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--white); letter-spacing: 0.04em; text-decoration: none; }
+.footer-logo span { color: var(--gold); }
 
 .footer-brand {
   display: block;
