@@ -209,21 +209,69 @@ h1 {
   gap: 24px;
 }
 
-.site-footer {
-  position: relative;
-  padding: 28px 0 44px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding: 2.5rem 0 1.5rem;
 }
 
-.site-footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: rgba(255,255,255,0.06);
+.footer-logo {
+  height: 32px;
+  width: auto;
+  margin-bottom: 0.6rem;
+  display: block;
+  opacity: 0.85;
 }
+
+.footer-brand {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer-meta {
+  font-size: 0.75rem;
+  color: var(--muted2);
+  margin-bottom: 0.3rem;
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  color: var(--muted2);
+}
+
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-center a {
+  font-size: 0.83rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-center a:hover { color: #fff; text-decoration: none; }
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: right;
+}
+
+.footer-right a {
+  font-size: 0.83rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-right a:hover { color: #fff; text-decoration: none; }
 
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
@@ -231,4 +279,6 @@ h1 {
   .grid-2 { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .nav { display: none; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .footer-right { text-align: left; }
 }

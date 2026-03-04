@@ -4,6 +4,8 @@ AOS.init({
   offset: 80
 })
 
+document.getElementById("year").textContent = new Date().getFullYear();
+
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener("click", e => {
     const id = link.getAttribute("href")
