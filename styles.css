@@ -30,10 +30,12 @@ a:hover { text-decoration: underline; }
   width: min(var(--container), calc(100% - 40px));
   margin: 0 auto;
 }
-.logo {
+
+  .brand img.logo {
+    height: 36px;
     width: auto;
-    height: 75px;
-}
+    display: block;
+  }
 
 .site-header {
   position: sticky;
