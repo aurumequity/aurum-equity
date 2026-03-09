@@ -160,7 +160,7 @@
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
     /* BUTTONS */
-    /* .btn, .btn-ghost {
+    .btn, .btn-ghost {
       display: inline-block;
       padding: 0.8rem 2rem;
       font-family: 'DM Sans', sans-serif;
@@ -190,7 +190,7 @@
     .btn.secondary:hover, .btn-ghost:hover {
       border-color: var(--gold);
       color: var(--gold);
-    } */
+    } 
 
       .btn-primary { background: var(--gold); color: var(--ink); border: none; padding: 0.85rem 2.2rem; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.25s; text-decoration: none; display: inline-block; }
   .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
