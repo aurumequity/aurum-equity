@@ -51,9 +51,8 @@
 
     .brand img.logo {
       height: 2.25em;
-    width: 2.25em;
-      width: auto;
-      display: block;
+      width: 2.25em;
+
     }
 
     /* If logo doesn't load, show text fallback */

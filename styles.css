@@ -43,9 +43,10 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
 }
 
-.logo { height: 2.25em;
-    width: 2.25em;font-size: 1.5rem; font-weight: 600; color: #5da9ff; letter-spacing: 0.04em; text-decoration: none; }
-.logo span { color: #5da9ff; }
+.logo {
+      height: 2.25em;
+      width: 2.25em;
+    }
 
 
 .site-header {
