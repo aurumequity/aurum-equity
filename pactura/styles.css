@@ -49,10 +49,9 @@
       padding: 1.2rem 4rem;
     }
 
-    .brand img.logo {
+    .logo {
       height: 2.25em;
       width: 2.25em;
-
     }
 
     /* If logo doesn't load, show text fallback */
