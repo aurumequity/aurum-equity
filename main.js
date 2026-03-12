@@ -1,28 +1,27 @@
 AOS.init({
   duration: 850,
   once: true,
-  offset: 80
-})
+  offset: 80,
+});
 
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener("click", e => {
-    const id = link.getAttribute("href")
-    const el = document.querySelector(id)
-    if (!el) return
-    e.preventDefault()
-    el.scrollIntoView({ behavior: "smooth", block: "start" })
-  })
-})
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    const id = link.getAttribute('href');
+    const el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
 
-document.querySelectorAll('.nav a').forEach(link => {
+document.querySelectorAll('.nav a').forEach((link) => {
   if (link.pathname === window.location.pathname) {
     link.setAttribute('aria-current', 'page');
   }
 });
 
-document.querySelector('.nav-toggle')
-  ?.addEventListener('click', () =>
-    document.querySelector('.nav')?.classList.toggle('open')
-  );
+document
+  .querySelector('.nav-toggle')
+  ?.addEventListener('click', () => document.querySelector('.nav')?.classList.toggle('open'));
