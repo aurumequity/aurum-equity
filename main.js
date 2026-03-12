@@ -16,8 +16,13 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   })
 })
 
-  document.querySelectorAll('.nav a').forEach(link => {
-    if (link.pathname === window.location.pathname) {
-      link.setAttribute('aria-current', 'page');
-    }
-  });
+document.querySelectorAll('.nav a').forEach(link => {
+  if (link.pathname === window.location.pathname) {
+    link.setAttribute('aria-current', 'page');
+  }
+});
+
+document.querySelector('.nav-toggle')
+  ?.addEventListener('click', () =>
+    document.querySelector('.nav')?.classList.toggle('open')
+  );
