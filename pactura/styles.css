@@ -66,8 +66,8 @@ body::before {
 }
 
 .logo {
-  height: 36px;
-  width: 36px;
+  height: 4em;
+  width: 4em;
   flex-shrink: 0;
 }
 
