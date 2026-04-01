@@ -516,6 +516,22 @@ p {
   color: var(--gold-light);
 }
 
+.external-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Ensure the icon scales with the text color */
+.external-link svg {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.external-link:hover svg {
+  opacity: 1;
+}
+
 /* SECURITY NOTE */
 .security-note {
   background: rgba(20, 25, 41, 0.6);
