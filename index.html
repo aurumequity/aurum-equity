@@ -1,281 +1,352 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurum Equity LLC | Technology Consulting and Systems Support</title>
+<meta name="description" content="Aurum Equity LLC delivers systems integration, application modernization, and compliance-hardened delivery for federal agencies and prime contractors. SAM.gov registered small business, NAICS 541511.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #faf7f1;
+    --bg-alt: #f2ede2;
+    --ink: #16202e;
+    --ink-soft: #4a5568;
+    --ink-muted: #7a8494;
+    --line: #e2dccd;
+    --brass: #9c7a2e;
+    --brass-deep: #7a5e21;
+    --brass-tint: #f1e6cc;
+    --navy: #16202e;
+    --white: #ffffff;
+    --radius: 6px;
+    --maxw: 1140px;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--brass-deep);
+    font-weight:600;
+  }
+  h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--navy);line-height:1.15;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:14px 26px;
+    border-radius:var(--radius);
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    border:1px solid transparent;
+    transition:all .15s ease;
+  }
+  .btn-primary{background:var(--navy);color:var(--white);}
+  .btn-primary:hover{background:#0d1520;}
+  .btn-ghost{background:transparent;color:var(--navy);border-color:var(--navy);}
+  .btn-ghost:hover{background:var(--navy);color:var(--white);}
 
-    <title>Aurum Equity LLC | Technology Consulting and Systems Support</title>
-    <meta
-      name="description"
-      content="Mission focused technology consulting and systems support for modernization, integration, and application delivery."
-    />
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="./favicon.png" />
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  </head>
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,247,241,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 0;
+  }
+  .logo{
+    font-family:var(--serif);
+    font-size:20px;
+    font-weight:600;
+    letter-spacing:.02em;
+  }
+  .logo span{color:var(--brass);}
+  .nav-links{display:flex;align-items:center;gap:32px;}
+  .nav-links a{font-size:14px;font-weight:500;color:var(--ink-soft);}
+  .nav-links a:hover{color:var(--navy);}
+  .nav-cta{font-size:14px;padding:10px 20px;}
+  .nav-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--navy);}
 
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="/" title="Return to Home">
-          <img
-            src="/Aurum-Equity-revamped-logo.png"
-            alt="Aurum Equity LLC"
-            class="logo"
-            onerror="
-              this.style.display = 'none';
-              this.nextElementSibling.style.display = 'block';
-            "
-          />
-          <span class="brand-text" style="display: none">Aurum <span>Equity</span></span>
-        </a>
-        <button class="nav-toggle" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="nav">
-          <a href="/">Home</a>
-          <a href="#capabilities">Capabilities</a>
-          <a href="#services">Services</a>
-          <a href="#past-performance">Past Performance</a>
-          <a
-            href="https://pactura.ai"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="external-link"
-          >
-            Pactura.ai
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              style="margin-left: 4px; vertical-align: middle"
-            >
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
-          </a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <a
-          class="btn btn-primary"
-          href="./Aurum_Equity_Capability_Statement.pdf"
-          target="_blank"
-          rel="noopener"
-        >
-          Capability Statement (143 KB PDF)
-        </a>
+  .hero{padding:96px 0 80px;}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;}
+  .hero h1{font-size:clamp(32px,4.2vw,48px);margin:16px 0 20px;}
+  .hero p.lead{font-size:18px;color:var(--ink-soft);max-width:52ch;margin-bottom:32px;}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:28px;}
+  .hero-note{font-size:13px;color:var(--ink-muted);border-left:2px solid var(--brass);padding-left:12px;}
+  .hero-panel{
+    background:var(--navy);
+    border-radius:12px;
+    padding:32px;
+    color:var(--white);
+  }
+  .hero-panel .tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#c9b880;margin-bottom:14px;display:block;}
+  .hero-panel h3{color:var(--white);font-size:20px;margin-bottom:16px;}
+  .scan-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:24px;}
+  .scan-list li{font-size:14px;color:#d7dbe2;display:flex;gap:10px;align-items:flex-start;}
+  .scan-list li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--brass);margin-top:7px;flex-shrink:0;}
+
+  .why-now{padding:64px 0;background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:36px;}
+  .stat-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px;}
+  .stat-card .num{font-family:var(--serif);font-size:22px;color:var(--brass-deep);margin-bottom:10px;}
+  .stat-card p{font-size:14px;color:var(--ink-soft);}
+
+  .industries{padding:88px 0;}
+  .section-head{max-width:60ch;margin-bottom:48px;}
+  .section-head h2{font-size:clamp(26px,3vw,34px);margin-top:12px;}
+  .section-head p{color:var(--ink-soft);margin-top:14px;font-size:16px;}
+  .industry-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .industry-card{
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:28px 24px;
+    background:var(--white);
+    transition:border-color .15s ease;
+  }
+  .industry-card:hover{border-color:var(--card-accent, var(--brass));}
+  .industry-card .mark{
+    width:40px;height:40px;border-radius:50%;
+    background:var(--mark-bg, var(--brass-tint));
+    color:var(--mark-fg, var(--brass-deep));
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-weight:600;font-size:15px;
+    margin-bottom:20px;
+  }
+  .industry-card.c1{--mark-bg:#f1e6cc;--mark-fg:#7a5e21;--card-accent:#9c7a2e;}
+  .industry-card.c2{--mark-bg:#dee8e5;--mark-fg:#204943;--card-accent:#2f6459;}
+  .industry-card.c3{--mark-bg:#f3e2da;--mark-fg:#8a4a30;--card-accent:#a8583f;}
+  .industry-card.c4{--mark-bg:#e2e6da;--mark-fg:#4b5a37;--card-accent:#6b7c4f;}
+  .industry-card h3{font-size:19px;margin-bottom:14px;}
+  .industry-card ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .industry-card li{font-size:14px;color:var(--ink-soft);padding-left:16px;position:relative;}
+  .industry-card li::before{content:"—";position:absolute;left:0;color:var(--brass);}
+
+  .how{padding:88px 0;background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:48px;}
+  .how-step{position:relative;padding-left:0;}
+  .how-step .n{font-family:var(--serif);font-size:44px;color:var(--brass-tint);-webkit-text-stroke:1.5px var(--brass);display:block;margin-bottom:10px;}
+  .how-step h3{font-size:17px;margin-bottom:10px;}
+  .how-step p{font-size:14px;color:var(--ink-soft);}
+
+  .scan{padding:96px 0;}
+  .scan-card{
+    background:var(--navy);
+    border-radius:14px;
+    padding:56px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+    align-items:center;
+  }
+  .scan-card h2{color:var(--white);font-size:clamp(24px,3vw,32px);margin-bottom:14px;}
+  .scan-card p{color:#c7cdd6;font-size:15px;margin-bottom:20px;}
+  .scan-card .btn-primary{background:var(--brass);}
+  .scan-card .btn-primary:hover{background:var(--brass-deep);}
+  .scan-card .btn-ghost{border-color:#ffffff40;color:var(--white);}
+  .scan-card .btn-ghost:hover{background:#ffffff15;}
+
+  .past-perf{padding:88px 0;}
+  .perf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px;}
+  .perf-card{border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:var(--white);}
+  .perf-card h3{font-size:16px;margin-bottom:10px;}
+  .perf-card p{font-size:14px;color:var(--ink-soft);}
+
+  footer{padding:48px 0;border-top:1px solid var(--line);}
+  .footer-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+  .footer-meta{font-size:13px;color:var(--ink-muted);display:flex;gap:20px;flex-wrap:wrap;}
+  .footer-brand{font-family:var(--serif);font-size:16px;color:var(--navy);}
+
+  @media (max-width:1024px) and (min-width:861px){
+    .industry-grid{grid-template-columns:repeat(2,1fr);}
+    .perf-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:860px){
+    .nav-links{display:none;}
+    .nav-toggle{display:block;}
+    .hero-grid,.industry-grid,.how-grid,.stat-grid,.perf-grid{grid-template-columns:1fr;}
+    .scan-card{grid-template-columns:1fr;padding:32px;}
+    .hero{padding:56px 0;}
+    .wrap{padding:0 20px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#">Aurum<span>·</span>Equity</a>
+      <div class="nav-links">
+        <a href="#capabilities">Capabilities</a>
+        <a href="#past-performance">Past Performance</a>
+        <a href="https://www.pactura.ai">Pactura.ai</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary nav-cta" href="Aurum_Equity_Capability_Statement_v2.pdf">Capability Statement</a>
       </div>
-    </header>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    </nav>
+  </div>
+</header>
 
-    <main>
-      <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-inner">
-          <div class="hero-copy" data-aos="fade-up">
-            <p class="eyebrow">Technology Consulting and Systems Support</p>
-            <h1>Modernization and delivery that keeps mission and compliance aligned.</h1>
-            <p class="subhead">
-              Systems integration, application development, and modernization executed with clear
-              documentation, accessibility awareness, and operational discipline.
-            </p>
-
-            <div class="hero-cta">
-              <a class="btn btn-primary" href="#contact">Contact</a>
-              <a class="btn btn-secondary" href="#capabilities">View Capabilities</a>
-            </div>
-
-            <div class="badges" data-aos="fade-up" data-aos-delay="150">
-              <div class="badge">NAICS 541511</div>
-              <div class="badge">UEI H2PBRHL3GT65</div>
-              <div class="badge">U.S. Based</div>
-            </div>
-          </div>
-
-          <div class="hero-panel" data-aos="fade-left">
-            <div class="panel-card">
-              <h3>Core focus</h3>
-              <ul>
-                <li>Systems support and integration</li>
-                <li>Modernization and migration</li>
-                <li>Application development</li>
-                <li>Documentation and delivery rigor</li>
-              </ul>
-            </div>
-
-            <div class="panel-card subtle">
-              <h3>Engagement model</h3>
-              <p>Short discovery, scoped delivery, and clear handoff. Built for accountability.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="capabilities" class="section">
-        <div class="container">
-          <div class="section-head" data-aos="fade-up">
-            <h2>Capabilities</h2>
-            <p>Contract ready presentation, structured execution.</p>
-          </div>
-
-          <div class="grid-3">
-            <div class="card" data-aos="fade-up">
-              <h3>Systems Support</h3>
-              <p>
-                Operational support, incident hygiene, and reliability improvements that hold up
-                under audit scrutiny.
-              </p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="80">
-              <h3>Integration</h3>
-              <p>APIs, data flows, and secure connectivity across modern and legacy systems.</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="160">
-              <h3>Modernization</h3>
-              <p>
-                Targeted refactors, platform migrations, and technical debt reduction with clear
-                risk controls.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="section alt">
-        <div class="container">
-          <div class="section-head" data-aos="fade-up">
-            <h2>Services</h2>
-            <p>Practical offerings that map to real procurement needs.</p>
-          </div>
-
-          <div class="grid-2">
-            <div class="card" data-aos="fade-up">
-              <h3>Discovery and Roadmap</h3>
-              <p>
-                Stakeholder interviews, current state assessment, prioritized backlog, and delivery
-                plan.
-              </p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="80">
-              <h3>Implementation</h3>
-              <p>Delivery with milestones, documentation, and repeatable handoff.</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="160">
-              <h3>Hardening and Compliance Support</h3>
-              <p>Accessibility checks, security aligned practices, and operational readiness.</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="240">
-              <h3>Ongoing Support</h3>
-              <p>Enhancements, maintenance, and predictable support workflows.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="past-performance" class="section">
-        <div class="container">
-          <div class="section-head" data-aos="fade-up">
-            <h2>Past Performance</h2>
-          </div>
-
-          <div class="grid-3">
-            <div class="card" data-aos="fade-up">
-              <h3>Integration Delivery</h3>
-              <p>Reduced manual handling by standardizing data exchange across systems.</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="80">
-              <h3>Modernization</h3>
-              <p>
-                Stabilized workflows by removing high risk bottlenecks and tightening operational
-                runbooks.
-              </p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="160">
-              <h3>Support and Reliability</h3>
-              <p>
-                Improved response consistency by establishing documented triage and release
-                practices.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section alt">
-        <div class="container">
-          <div class="section-head" data-aos="fade-up">
-            <h2>Contact</h2>
-            <p>Simple. Direct. Procurement friendly.</p>
-          </div>
-
-          <div class="contact-grid">
-            <div class="card" data-aos="fade-up">
-              <h3>Email</h3>
-              <p>
-                <a href="mailto:procurement@aurumequitylegacy.com"
-                  >procurement@aurumequitylegacy.com</a
-                >
-              </p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="80">
-              <h3>Capability Statement</h3>
-              <a href="./Aurum_Equity_Capability_Statement_v2.pdf" target="_blank">
-                Download Capability Statement (PDF)
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-left">
-          <a class="brand" href="/" title="Return to Home">
-            <img
-              src="/Aurum-Equity-revamped-logo.png"
-              alt="Aurum Equity LLC"
-              class="logo"
-              onerror="
-                this.style.display = 'none';
-                this.nextElementSibling.style.display = 'block';
-              "
-            />
-            <span class="brand-text" style="display: none">Aurum <span>Equity</span></span>
-          </a>
-          <div class="footer-meta">NAICS 541511 &bull; UEI H2PBRHL3GT65</div>
-          <div class="footer-copy">&copy; <span id="year"></span> Aurum Equity LLC</div>
-        </div>
-        <div class="footer-center">
-          <a href="#capabilities">Capabilities</a>
-          <a href="#services">Services</a>
-          <a href="#past-performance">Past Performance</a>
-          <a href="https://pactura.ai" target="_blank" rel="noopener noreferrer">Pactura.ai</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="footer-right">
-          <a href="mailto:procurement@aurumequitylegacy.com">procurement@aurumequitylegacy.com</a>
-          <a href="tel:+17032020088">(703) 202-0088</a>
-        </div>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">SAM.gov registered small business · NAICS 541511</span>
+      <h1>Technology modernization and compliance delivery, built for federal missions.</h1>
+      <p class="lead">Aurum Equity LLC delivers systems integration, application modernization, and compliance-hardened delivery for federal agencies and prime contractors — with the documentation rigor procurement teams expect.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="Aurum_Equity_Capability_Statement_v2.pdf">Download Capability Statement</a>
+        <a class="btn btn-ghost" href="#past-performance">View Past Performance</a>
       </div>
-    </footer>
+      <p class="hero-note">Woman-owned small business — WOSB certification in process. UEI H2PBRHL3GT65.</p>
+    </div>
+    <div class="hero-panel">
+      <span class="tag">At a glance</span>
+      <h3>Registration & capability snapshot</h3>
+      <ul class="scan-list">
+        <li>NAICS 541511 — Custom Computer Programming Services</li>
+        <li>UEI H2PBRHL3GT65, active in SAM.gov</li>
+        <li>Pursuing Women-Owned Small Business (WOSB) certification</li>
+        <li>U.S.-based delivery team, procurement-friendly engagement model</li>
+      </ul>
+      <a class="btn btn-primary" href="#contact" style="width:100%;justify-content:center;">Request teaming discussion</a>
+    </div>
+  </div>
+</section>
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script src="./main.js" defer></script>
-  </body>
+<section class="why-now">
+  <div class="wrap">
+    <span class="eyebrow">Engagement model</span>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="num">Discovery</div>
+        <p>Stakeholder interviews, current-state assessment, and a prioritized delivery plan before any code is written.</p>
+      </div>
+      <div class="stat-card">
+        <div class="num">Scoped delivery</div>
+        <p>Milestone-based implementation with documentation at every handoff — built for accountability, not scope creep.</p>
+      </div>
+      <div class="stat-card">
+        <div class="num">Clear handoff</div>
+        <p>Hardening, compliance support, and ongoing maintenance, structured so your team can pick up where we leave off.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="industries" id="capabilities">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Contract-ready presentation, structured execution</span>
+      <h2>Core capabilities</h2>
+      <p>Practical offerings mapped to real procurement needs — systems support through compliance hardening.</p>
+    </div>
+    <div class="industry-grid">
+      <div class="industry-card c1">
+        <div class="mark">01</div>
+        <h3>Systems Support</h3>
+        <ul>
+          <li>Operational support and incident hygiene</li>
+          <li>Reliability improvements that hold up under audit scrutiny</li>
+        </ul>
+      </div>
+      <div class="industry-card c2">
+        <div class="mark">02</div>
+        <h3>Integration</h3>
+        <ul>
+          <li>APIs, data flows, and secure connectivity</li>
+          <li>Modern and legacy systems bridged without disruption</li>
+        </ul>
+      </div>
+      <div class="industry-card c3">
+        <div class="mark">03</div>
+        <h3>Modernization</h3>
+        <ul>
+          <li>Targeted refactors and platform migrations</li>
+          <li>Technical debt reduction with clear risk controls</li>
+        </ul>
+      </div>
+      <div class="industry-card c4">
+        <div class="mark">04</div>
+        <h3>Compliance & Hardening</h3>
+        <ul>
+          <li>Accessibility checks and security-aligned practices</li>
+          <li>Operational readiness ahead of audit or ATO review</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="scan" id="proof">
+  <div class="wrap">
+    <div class="scan-card">
+      <div>
+        <h2>Proof of delivery: Pactura.ai</h2>
+        <p>We designed, built, and hardened Pactura.ai — an AI-driven document intelligence engine now processing sensitive legal, medical, and financial records for commercial clients. It's a live example of our ability to take a system from architecture through production, with the same documentation and compliance discipline we bring to federal delivery.</p>
+        <a class="btn btn-primary" href="https://www.pactura.ai">View Pactura.ai</a>
+      </div>
+      <div>
+        <a class="btn btn-ghost" style="width:100%;justify-content:center;" href="#contact">Request a technical capability briefing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="past-perf" id="past-performance">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Track record</span>
+      <h2>Past performance</h2>
+    </div>
+    <div class="perf-grid">
+      <div class="perf-card">
+        <h3>Integration Delivery</h3>
+        <p>Reduced manual handling by standardizing data exchange across systems.</p>
+      </div>
+      <div class="perf-card">
+        <h3>Modernization</h3>
+        <p>Stabilized workflows by removing high-risk bottlenecks and tightening operational runbooks.</p>
+      </div>
+      <div class="perf-card">
+        <h3>Support and Reliability</h3>
+        <p>Improved response consistency by establishing documented triage and release practices.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">Aurum Equity LLC</div>
+    <div class="footer-meta">
+      <span>NAICS 541511</span>
+      <span>UEI H2PBRHL3GT65</span>
+      <span>WOSB — certification in process</span>
+      <span>procurement@aurumequitylegacy.com</span>
+      <span>(703) 202-0088</span>
+      <span>&copy; Aurum Equity LLC</span>
+    </div>
+  </div>
+</footer>
+
+</body>
 </html>
