@@ -137,7 +137,6 @@
   .industry-card.c2{--mark-bg:#dee8e5;--mark-fg:#204943;--card-accent:#2f6459;}
   .industry-card.c3{--mark-bg:#f3e2da;--mark-fg:#8a4a30;--card-accent:#a8583f;}
   .industry-card.c4{--mark-bg:#e2e6da;--mark-fg:#4b5a37;--card-accent:#6b7c4f;}
-  .industry-card.c5{--mark-bg:#e4dfe8;--mark-fg:#4a3a5a;--card-accent:#6d5687;}
   .industry-card h3{font-size:19px;margin-bottom:14px;}
   .industry-card ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
   .industry-card li{font-size:14px;color:var(--ink-soft);padding-left:16px;position:relative;}
@@ -184,6 +183,11 @@
   .opportunity-list li{font-size:14px;color:var(--ink-soft);padding-left:16px;position:relative;}
   .opportunity-list li::before{content:"—";position:absolute;left:0;color:var(--brass);}
 
+  .prime-section{padding:72px 0;}
+  .prime-inner{max-width:720px;margin:0 auto;text-align:center;}
+  .prime-inner h2{margin-bottom:16px;}
+  .prime-inner p{font-size:16px;color:var(--ink-soft);margin-bottom:14px;}
+
   footer{padding:48px 0;border-top:1px solid var(--line);}
   .footer-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
   .footer-meta{font-size:13px;color:var(--ink-muted);display:flex;gap:20px;flex-wrap:wrap;}
@@ -228,8 +232,8 @@
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">SAM.gov Registered Small Business | NAICS 541511, 541512, 541519</span>
-      <h1>Software Engineering and Technology Modernization for Government Missions</h1>
-      <p class="lead">Aurum Equity LLC provides software engineering, application modernization, systems integration, and technology support to government agencies and prime contractors. We help organizations modernize legacy applications, integrate disconnected systems, automate complex workflows, and build secure, maintainable software backed by disciplined documentation and structured delivery.</p>
+      <h1>Software Engineering, Systems Integration, and Application Modernization for Federal Missions</h1>
+      <p class="lead">Aurum Equity LLC provides software engineering, application modernization, systems integration, and technology support to government agencies and prime contractors. We help organizations modernize legacy applications, integrate disconnected systems, automate complex workflows, and build secure, maintainable software through security-conscious, documentation-driven delivery.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="Aurum_Equity_Capability_Statement_v2.pdf" target="_blank" rel="noopener noreferrer">Download Capability Statement<span class="sr-only"> (opens PDF in a new tab)</span></a>
         <a class="btn btn-ghost" href="#contact">Discuss a Contract or Teaming Opportunity</a>
@@ -299,19 +303,6 @@
       </div>
       <div class="industry-card c2">
         <div class="mark">02</div>
-        <h3>Application Modernization</h3>
-        <ul>
-          <li>Legacy system assessment and modernization</li>
-          <li>Application refactoring</li>
-          <li>Platform and architecture improvements</li>
-          <li>Technical debt reduction</li>
-          <li>Performance optimization</li>
-          <li>Maintainability and scalability improvements</li>
-          <li>Incremental modernization strategies</li>
-        </ul>
-      </div>
-      <div class="industry-card c3">
-        <div class="mark">03</div>
         <h3>Systems Integration</h3>
         <ul>
           <li>REST API development and integration</li>
@@ -323,29 +314,31 @@
           <li>Data validation and error handling</li>
         </ul>
       </div>
+      <div class="industry-card c3">
+        <div class="mark">03</div>
+        <h3>Application Modernization</h3>
+        <ul>
+          <li>Legacy system assessment and modernization</li>
+          <li>Application refactoring</li>
+          <li>Platform and architecture improvements</li>
+          <li>Technical debt reduction</li>
+          <li>Performance optimization</li>
+          <li>Maintainability and scalability improvements</li>
+          <li>Incremental modernization strategies</li>
+        </ul>
+      </div>
       <div class="industry-card c4">
         <div class="mark">04</div>
-        <h3>Software Operations & Technical Support</h3>
+        <h3>Technical Operations & Security Readiness</h3>
         <ul>
           <li>Application maintenance and troubleshooting</li>
           <li>Incident analysis and remediation</li>
           <li>Release and deployment support</li>
-          <li>Software documentation</li>
-          <li>Technical runbooks and knowledge transfer</li>
-          <li>Reliability improvements</li>
-          <li>Continuous system enhancement</li>
-        </ul>
-      </div>
-      <div class="industry-card c5">
-        <div class="mark">05</div>
-        <h3>Security, Accessibility & Delivery Readiness</h3>
-        <ul>
           <li>Secure software development practices</li>
           <li>Role-based access and authentication support</li>
           <li>Accessibility-focused development and testing</li>
-          <li>Technical and configuration documentation</li>
-          <li>Requirements traceability</li>
-          <li>SDLC documentation</li>
+          <li>Technical runbooks and knowledge transfer</li>
+          <li>SDLC and requirements traceability documentation</li>
           <li>Support for security and authorization documentation requirements</li>
         </ul>
       </div>
@@ -355,25 +348,16 @@
 
 <section class="scan" id="proof">
   <div class="wrap">
-    <div class="scan-card">
+    <div class="scan-card" style="grid-template-columns:1fr;">
       <div>
-        <h2>Demonstrated technology capability: Pactura.ai</h2>
-        <p>Aurum Equity designed and developed Pactura.ai, an AI-powered document intelligence platform demonstrating our ability to take complex software from architecture through working implementation. The platform combines document ingestion, AI-assisted analysis, structured data extraction, workflow automation, and application-level security to help users work with document-intensive processes.</p>
-        <a class="btn btn-primary" href="https://www.pactura.ai">View Pactura.ai</a>
-      </div>
-      <div>
-        <p style="color:#c7cdd6;font-size:14px;margin-bottom:16px;">Pactura.ai demonstrates capabilities applicable to government requirements involving:</p>
-        <ul class="scan-list">
-          <li>Artificial intelligence and machine learning integration</li>
-          <li>Document processing</li>
-          <li>Natural language processing</li>
-          <li>Data extraction and classification</li>
-          <li>Workflow automation</li>
-          <li>Secure application development</li>
-          <li>API integration</li>
-          <li>Full-stack software engineering</li>
-        </ul>
-        <a class="btn btn-ghost" style="width:100%;justify-content:center;" href="#contact">Request a Technical Capability Briefing</a>
+        <h2>Proof of Delivery: Pactura.ai</h2>
+        <p>Aurum Equity designed and developed Pactura.ai, an AI-powered document intelligence platform that demonstrates our ability to take complex software from architecture through working production implementation.</p>
+        <p>The platform combines document ingestion, AI-assisted analysis, structured data extraction, workflow automation, and human review to support document-intensive business processes.</p>
+        <p>Pactura.ai demonstrates Aurum Equity's capabilities in full-stack development, artificial intelligence integration, API development, workflow automation, data processing, and secure application engineering.</p>
+        <div class="hero-actions" style="margin-bottom:0;">
+          <a class="btn btn-primary" href="https://www.pactura.ai">View Pactura.ai</a>
+          <a class="btn btn-ghost" href="#contact">Request a Technical Capability Briefing</a>
+        </div>
       </div>
     </div>
   </div>
@@ -387,29 +371,24 @@
     </div>
     <div class="perf-grid">
       <div class="perf-card">
-        <h3>High-Volume Customer Web Platform</h3>
-        <p>Contributed software engineering and modernization support for a customer-facing telecommunications platform serving more than 500,000 users. Work included application enhancements, site performance improvements, analytics integration, customer experience improvements, and production software support.</p>
-        <p class="tags"><strong>Relevant capabilities:</strong> Web Application Development | Application Modernization | Performance Optimization | Analytics | Enterprise Software</p>
+        <h3>High-Volume Telecommunications Web Platform</h3>
+        <p>Supported development and modernization of a customer-facing telecommunications platform serving more than 500,000 users. Contributed to application enhancements, site performance improvements, analytics integration, customer experience improvements, and production software support.</p>
+        <p class="tags"><strong>Relevant capabilities:</strong> Web Application Development · Application Modernization · Performance Optimization · Analytics Integration</p>
       </div>
       <div class="perf-card">
         <h3>Enterprise Analytics Platform</h3>
         <p>Led development of an analytics solution designed to consolidate multiple sales and marketing reporting sources into a unified reporting environment. Provided technical leadership to an offshore development team and supported application architecture, integration, and implementation.</p>
-        <p class="tags"><strong>Relevant capabilities:</strong> Systems Integration | Analytics | Data Consolidation | Technical Leadership | Software Development</p>
+        <p class="tags"><strong>Relevant capabilities:</strong> Systems Integration · Analytics · Data Consolidation · Technical Leadership</p>
       </div>
       <div class="perf-card">
-        <h3>Transportation & Logistics Application</h3>
-        <p>Developed application capabilities supporting truck drivers and organizations managing vendors, loads, and related transportation workflows.</p>
-        <p class="tags"><strong>Relevant capabilities:</strong> Application Development | Workflow Automation | Logistics Technology | Data Management</p>
+        <h3>Transportation and Logistics Application</h3>
+        <p>Developed software capabilities supporting truck drivers and organizations managing vendors, loads, and operational transportation workflows.</p>
+        <p class="tags"><strong>Relevant capabilities:</strong> Custom Software Development · Workflow Automation · Logistics Technology · Data Management</p>
       </div>
       <div class="perf-card">
         <h3>Digital Account Management</h3>
-        <p>Developed functionality enabling customers to securely switch between business and personal account experiences within a digital platform.</p>
-        <p class="tags"><strong>Relevant capabilities:</strong> Authentication | Account Management | Customer Experience | Enterprise Web Development</p>
-      </div>
-      <div class="perf-card">
-        <h3>Digital Commerce Development</h3>
-        <p>Supported development of customer purchasing workflows and new functionality within a high-volume telecommunications commerce environment.</p>
-        <p class="tags"><strong>Relevant capabilities:</strong> E-Commerce | Full-Stack Development | Customer-Facing Applications | Enterprise Integration</p>
+        <p>Developed functionality enabling users to securely switch between business and personal account experiences within an enterprise digital platform.</p>
+        <p class="tags"><strong>Relevant capabilities:</strong> Account Management · Enterprise Web Development · Authentication Workflows · Customer Experience</p>
       </div>
     </div>
   </div>
@@ -437,6 +416,14 @@
     <div class="contact-actions" style="margin-top:16px;">
       <a class="btn btn-ghost" href="Aurum_Equity_Capability_Statement_v2.pdf" target="_blank" rel="noopener noreferrer">Download Capability Statement<span class="sr-only"> (opens PDF in a new tab)</span></a>
     </div>
+  </div>
+</section>
+
+<section class="prime-section">
+  <div class="wrap prime-inner">
+    <h2>Built for Prime and Subcontracting Relationships</h2>
+    <p>Aurum Equity supports federal prime contractors with clearly scoped technical work packages, integrated software development support, application modernization, systems integration, AI-enabled workflow development, and technical surge capacity.</p>
+    <p>We can operate as an independent delivery partner or integrate with established program teams to support specific technical objectives.</p>
   </div>
 </section>
 

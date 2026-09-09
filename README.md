@@ -2,23 +2,25 @@
 
 This repository contains the source code for the Aurum Equity LLC public website.
 
-Aurum Equity LLC provides technology consulting and systems support services focused on system performance, integration, and modernization.
+Aurum Equity LLC provides software engineering, application modernization, systems integration, and technology support to government agencies and prime contractors.
 
 ## Services Focus
 
-Application development and support
+Custom software development
 Systems integration
-IT modernization support
-Technical project support
+Application modernization
+Technical operations and security readiness
 
 ## Purpose of This Site
 
 The website provides:
 
-Company overview
-Service descriptions
-Contact information
+Company overview and contracting information (UEI, CAGE, NAICS)
+Core capabilities by category
+Pactura.ai technology capability demonstration
+Relevant experience
 Capability statement download
+Contact and teaming information
 
 ## Technology
 
