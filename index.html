@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aurum Equity LLC | Technology Consulting and Systems Support</title>
-<meta name="description" content="Aurum Equity LLC delivers systems integration, application modernization, and compliance-hardened delivery for federal agencies and prime contractors. SAM.gov registered small business, NAICS 541511.">
+<title>Aurum Equity LLC | Software Engineering and Technology Modernization</title>
+<meta name="description" content="Aurum Equity LLC provides software engineering, application modernization, systems integration, and technology support to government agencies and prime contractors. SAM.gov registered small business, NAICS 541511.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -36,6 +36,7 @@
   }
   a{color:inherit;text-decoration:none;}
   img{max-width:100%;display:block;}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
   .eyebrow{
     font-size:12px;
@@ -82,7 +83,8 @@
   .nav-links{display:flex;align-items:center;gap:32px;}
   .nav-links a{font-size:14px;font-weight:500;color:var(--ink-soft);}
   .nav-links a:hover{color:var(--navy);}
-  .nav-cta{font-size:14px;padding:10px 20px;}
+  .nav-links a.nav-cta{font-size:14px;padding:10px 20px;color:var(--white);}
+  .nav-links a.nav-cta:hover{color:var(--white);}
   .nav-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--navy);}
 
   .hero{padding:96px 0 80px;}
@@ -105,6 +107,7 @@
 
   .why-now{padding:64px 0;background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:36px;}
+  .why-grid{grid-template-columns:repeat(4,1fr);}
   .stat-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px;}
   .stat-card .num{font-family:var(--serif);font-size:22px;color:var(--brass-deep);margin-bottom:10px;}
   .stat-card p{font-size:14px;color:var(--ink-soft);}
@@ -113,7 +116,7 @@
   .section-head{max-width:60ch;margin-bottom:48px;}
   .section-head h2{font-size:clamp(26px,3vw,34px);margin-top:12px;}
   .section-head p{color:var(--ink-soft);margin-top:14px;font-size:16px;}
-  .industry-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .industry-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;}
   .industry-card{
     border:1px solid var(--line);
     border-radius:10px;
@@ -134,6 +137,7 @@
   .industry-card.c2{--mark-bg:#dee8e5;--mark-fg:#204943;--card-accent:#2f6459;}
   .industry-card.c3{--mark-bg:#f3e2da;--mark-fg:#8a4a30;--card-accent:#a8583f;}
   .industry-card.c4{--mark-bg:#e2e6da;--mark-fg:#4b5a37;--card-accent:#6b7c4f;}
+  .industry-card.c5{--mark-bg:#e4dfe8;--mark-fg:#4a3a5a;--card-accent:#6d5687;}
   .industry-card h3{font-size:19px;margin-bottom:14px;}
   .industry-card ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
   .industry-card li{font-size:14px;color:var(--ink-soft);padding-left:16px;position:relative;}
@@ -164,24 +168,38 @@
   .scan-card .btn-ghost:hover{background:#ffffff15;}
 
   .past-perf{padding:88px 0;}
-  .perf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px;}
+  .perf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:36px;}
   .perf-card{border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:var(--white);}
   .perf-card h3{font-size:16px;margin-bottom:10px;}
   .perf-card p{font-size:14px;color:var(--ink-soft);}
+  .perf-card .tags{font-size:12px;color:var(--ink-muted);margin-top:14px;}
+  .perf-card .tags strong{color:var(--ink-soft);}
+
+  .contact-section{padding:80px 0;background:var(--bg-alt);border-top:1px solid var(--line);}
+  .contact-inner{max-width:640px;margin:0 auto;text-align:center;}
+  .contact-inner h2{margin-bottom:14px;}
+  .contact-inner p.lead{font-size:16px;color:var(--ink-soft);margin-bottom:32px;}
+  .contact-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .opportunity-list{list-style:none;display:inline-grid;grid-template-columns:1fr 1fr;gap:10px 32px;text-align:left;margin-bottom:32px;}
+  .opportunity-list li{font-size:14px;color:var(--ink-soft);padding-left:16px;position:relative;}
+  .opportunity-list li::before{content:"—";position:absolute;left:0;color:var(--brass);}
 
   footer{padding:48px 0;border-top:1px solid var(--line);}
   .footer-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
   .footer-meta{font-size:13px;color:var(--ink-muted);display:flex;gap:20px;flex-wrap:wrap;}
+  .footer-meta a:hover{color:var(--navy);text-decoration:underline;}
   .footer-brand{font-family:var(--serif);font-size:16px;color:var(--navy);}
 
   @media (max-width:1024px) and (min-width:861px){
     .industry-grid{grid-template-columns:repeat(2,1fr);}
     .perf-grid{grid-template-columns:1fr 1fr;}
+    .why-grid{grid-template-columns:repeat(2,1fr);}
   }
   @media (max-width:860px){
     .nav-links{display:none;}
     .nav-toggle{display:block;}
-    .hero-grid,.industry-grid,.how-grid,.stat-grid,.perf-grid{grid-template-columns:1fr;}
+    .hero-grid,.industry-grid,.how-grid,.stat-grid,.perf-grid,.why-grid{grid-template-columns:1fr;}
+    .opportunity-list{grid-template-columns:1fr;}
     .scan-card{grid-template-columns:1fr;padding:32px;}
     .hero{padding:56px 0;}
     .wrap{padding:0 20px;}
@@ -199,7 +217,7 @@
         <a href="#past-performance">Past Performance</a>
         <a href="https://www.pactura.ai">Pactura.ai</a>
         <a href="#contact">Contact</a>
-        <a class="btn btn-primary nav-cta" href="Aurum_Equity_Capability_Statement_v2.pdf">Capability Statement</a>
+        <a class="btn btn-primary nav-cta" href="Aurum_Equity_Capability_Statement_v2.pdf" target="_blank" rel="noopener noreferrer">Capability Statement<span class="sr-only"> (opens PDF in a new tab)</span></a>
       </div>
       <button class="nav-toggle" aria-label="Menu">&#9776;</button>
     </nav>
@@ -209,23 +227,25 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">SAM.gov registered small business · NAICS 541511, 541512, 541519</span>
-      <h1>Technology modernization and compliance delivery, built for federal missions.</h1>
-      <p class="lead">Aurum Equity LLC delivers systems integration, application modernization, and compliance-hardened delivery for federal agencies and prime contractors — with the documentation rigor procurement teams expect.</p>
+      <span class="eyebrow">SAM.gov Registered Small Business | NAICS 541511, 541512, 541519</span>
+      <h1>Software Engineering and Technology Modernization for Government Missions</h1>
+      <p class="lead">Aurum Equity LLC provides software engineering, application modernization, systems integration, and technology support to government agencies and prime contractors. We help organizations modernize legacy applications, integrate disconnected systems, automate complex workflows, and build secure, maintainable software backed by disciplined documentation and structured delivery.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="Aurum_Equity_Capability_Statement_v2.pdf">Download Capability Statement</a>
-        <a class="btn btn-ghost" href="#past-performance">View Past Performance</a>
+        <a class="btn btn-primary" href="Aurum_Equity_Capability_Statement_v2.pdf" target="_blank" rel="noopener noreferrer">Download Capability Statement<span class="sr-only"> (opens PDF in a new tab)</span></a>
+        <a class="btn btn-ghost" href="#contact">Discuss a Contract or Teaming Opportunity</a>
       </div>
-      <p class="hero-note">Women-owned small business — WOSB certification in process. UEI H2PBRHL3GT65.</p>
+      <p class="hero-note">Women-owned small business — SBA WOSB certification pending. UEI H2PBRHL3GT65.</p>
     </div>
     <div class="hero-panel">
-      <span class="tag">At a glance</span>
+      <span class="tag">Contracting information</span>
       <h3>Registration & capability snapshot</h3>
       <ul class="scan-list">
-        <li>NAICS 541511, 541512, 541519 · CAGE 18U14</li>
-        <li>UEI H2PBRHL3GT65, active in SAM.gov</li>
-        <li>Pursuing Women-Owned Small Business (WOSB) certification</li>
-        <li>U.S.-based delivery team, procurement-friendly engagement model</li>
+        <li>Legal Business Name: Aurum Equity LLC</li>
+        <li>UEI: H2PBRHL3GT65 &nbsp;|&nbsp; CAGE: 18U14</li>
+        <li>SAM.gov: Active</li>
+        <li>Primary NAICS: 541511 — Custom Computer Programming Services</li>
+        <li>Additional NAICS: 541512, 541519</li>
+        <li>Ownership: Woman-Owned &nbsp;|&nbsp; SBA WOSB Certification: Pending</li>
       </ul>
       <a class="btn btn-primary" href="#contact" style="width:100%;justify-content:center;">Request teaming discussion</a>
     </div>
@@ -234,19 +254,23 @@
 
 <section class="why-now">
   <div class="wrap">
-    <span class="eyebrow">Engagement model</span>
-    <div class="stat-grid">
-      <div class="stat-card">
-        <div class="num">Discovery</div>
-        <p>Stakeholder interviews, current-state assessment, and a prioritized delivery plan before any code is written.</p>
+    <span class="eyebrow">Why Aurum Equity</span>
+    <div class="stat-grid why-grid">
+      <div class="perf-card">
+        <h3>Senior-Level Technical Execution</h3>
+        <p>Aurum Equity brings hands-on software engineering experience across enterprise applications, customer-facing platforms, systems integration, analytics, and workflow automation.</p>
       </div>
-      <div class="stat-card">
-        <div class="num">Scoped delivery</div>
-        <p>Milestone-based implementation with documentation at every handoff — built for accountability, not scope creep.</p>
+      <div class="perf-card">
+        <h3>Agile Small-Business Delivery</h3>
+        <p>Our size enables direct access to senior technical leadership, rapid decision-making, and flexible execution without the management overhead associated with larger consulting organizations.</p>
       </div>
-      <div class="stat-card">
-        <div class="num">Clear handoff</div>
-        <p>Hardening, compliance support, and ongoing maintenance, structured so your team can pick up where we leave off.</p>
+      <div class="perf-card">
+        <h3>Built for Teaming</h3>
+        <p>Aurum Equity can support prime contractors as a specialized software development and technology modernization subcontractor, including clearly scoped work packages and integrated development-team support.</p>
+      </div>
+      <div class="perf-card">
+        <h3>Documentation-Driven Delivery</h3>
+        <p>Technical documentation, implementation decisions, deployment procedures, and operational knowledge are captured throughout delivery rather than deferred until project closeout.</p>
       </div>
     </div>
   </div>
@@ -257,39 +281,72 @@
     <div class="section-head">
       <span class="eyebrow">Contract-ready presentation, structured execution</span>
       <h2>Core capabilities</h2>
-      <p>Practical offerings mapped to real procurement needs — systems support through compliance hardening.</p>
+      <p>Practical, technically grounded offerings mapped to real procurement needs.</p>
     </div>
     <div class="industry-grid">
       <div class="industry-card c1">
         <div class="mark">01</div>
-        <h3>Systems Support</h3>
+        <h3>Custom Software Development</h3>
         <ul>
-          <li>Operational support and incident hygiene</li>
-          <li>Reliability improvements that hold up under audit scrutiny</li>
+          <li>Full-stack application development</li>
+          <li>Java and Python development</li>
+          <li>Web applications and responsive user interfaces</li>
+          <li>REST APIs and web services</li>
+          <li>Database-backed applications</li>
+          <li>Legacy application enhancement</li>
+          <li>Software testing and defect remediation</li>
         </ul>
       </div>
       <div class="industry-card c2">
         <div class="mark">02</div>
-        <h3>Integration</h3>
+        <h3>Application Modernization</h3>
         <ul>
-          <li>APIs, data flows, and secure connectivity</li>
-          <li>Modern and legacy systems bridged without disruption</li>
+          <li>Legacy system assessment and modernization</li>
+          <li>Application refactoring</li>
+          <li>Platform and architecture improvements</li>
+          <li>Technical debt reduction</li>
+          <li>Performance optimization</li>
+          <li>Maintainability and scalability improvements</li>
+          <li>Incremental modernization strategies</li>
         </ul>
       </div>
       <div class="industry-card c3">
         <div class="mark">03</div>
-        <h3>Modernization</h3>
+        <h3>Systems Integration</h3>
         <ul>
-          <li>Targeted refactors and platform migrations</li>
-          <li>Technical debt reduction with clear risk controls</li>
+          <li>REST API development and integration</li>
+          <li>Data exchange and transformation</li>
+          <li>Enterprise system integration</li>
+          <li>Third-party service integration</li>
+          <li>Legacy-to-modern system connectivity</li>
+          <li>Workflow automation</li>
+          <li>Data validation and error handling</li>
         </ul>
       </div>
       <div class="industry-card c4">
         <div class="mark">04</div>
-        <h3>Compliance & Hardening</h3>
+        <h3>Software Operations & Technical Support</h3>
         <ul>
-          <li>Accessibility checks and security-aligned practices</li>
-          <li>Operational readiness ahead of audit or ATO review</li>
+          <li>Application maintenance and troubleshooting</li>
+          <li>Incident analysis and remediation</li>
+          <li>Release and deployment support</li>
+          <li>Software documentation</li>
+          <li>Technical runbooks and knowledge transfer</li>
+          <li>Reliability improvements</li>
+          <li>Continuous system enhancement</li>
+        </ul>
+      </div>
+      <div class="industry-card c5">
+        <div class="mark">05</div>
+        <h3>Security, Accessibility & Delivery Readiness</h3>
+        <ul>
+          <li>Secure software development practices</li>
+          <li>Role-based access and authentication support</li>
+          <li>Accessibility-focused development and testing</li>
+          <li>Technical and configuration documentation</li>
+          <li>Requirements traceability</li>
+          <li>SDLC documentation</li>
+          <li>Support for security and authorization documentation requirements</li>
         </ul>
       </div>
     </div>
@@ -300,12 +357,23 @@
   <div class="wrap">
     <div class="scan-card">
       <div>
-        <h2>Proof of delivery: Pactura.ai</h2>
-        <p>We designed, built, and hardened Pactura.ai — an AI-driven document intelligence engine now processing sensitive legal, medical, and financial records for commercial clients. It's a live example of our ability to take a system from architecture through production, with the same documentation and compliance discipline we bring to federal delivery.</p>
+        <h2>Demonstrated technology capability: Pactura.ai</h2>
+        <p>Aurum Equity designed and developed Pactura.ai, an AI-powered document intelligence platform demonstrating our ability to take complex software from architecture through working implementation. The platform combines document ingestion, AI-assisted analysis, structured data extraction, workflow automation, and application-level security to help users work with document-intensive processes.</p>
         <a class="btn btn-primary" href="https://www.pactura.ai">View Pactura.ai</a>
       </div>
       <div>
-        <a class="btn btn-ghost" style="width:100%;justify-content:center;" href="#contact">Request a technical capability briefing</a>
+        <p style="color:#c7cdd6;font-size:14px;margin-bottom:16px;">Pactura.ai demonstrates capabilities applicable to government requirements involving:</p>
+        <ul class="scan-list">
+          <li>Artificial intelligence and machine learning integration</li>
+          <li>Document processing</li>
+          <li>Natural language processing</li>
+          <li>Data extraction and classification</li>
+          <li>Workflow automation</li>
+          <li>Secure application development</li>
+          <li>API integration</li>
+          <li>Full-stack software engineering</li>
+        </ul>
+        <a class="btn btn-ghost" style="width:100%;justify-content:center;" href="#contact">Request a Technical Capability Briefing</a>
       </div>
     </div>
   </div>
@@ -315,26 +383,64 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Track record</span>
-      <h2>Past performance</h2>
+      <h2>Relevant experience</h2>
     </div>
     <div class="perf-grid">
       <div class="perf-card">
-        <h3>Integration Delivery</h3>
-        <p>Reduced manual handling by standardizing data exchange across systems.</p>
+        <h3>High-Volume Customer Web Platform</h3>
+        <p>Contributed software engineering and modernization support for a customer-facing telecommunications platform serving more than 500,000 users. Work included application enhancements, site performance improvements, analytics integration, customer experience improvements, and production software support.</p>
+        <p class="tags"><strong>Relevant capabilities:</strong> Web Application Development | Application Modernization | Performance Optimization | Analytics | Enterprise Software</p>
       </div>
       <div class="perf-card">
-        <h3>Modernization</h3>
-        <p>Stabilized workflows by removing high-risk bottlenecks and tightening operational runbooks.</p>
+        <h3>Enterprise Analytics Platform</h3>
+        <p>Led development of an analytics solution designed to consolidate multiple sales and marketing reporting sources into a unified reporting environment. Provided technical leadership to an offshore development team and supported application architecture, integration, and implementation.</p>
+        <p class="tags"><strong>Relevant capabilities:</strong> Systems Integration | Analytics | Data Consolidation | Technical Leadership | Software Development</p>
       </div>
       <div class="perf-card">
-        <h3>Support and Reliability</h3>
-        <p>Improved response consistency by establishing documented triage and release practices.</p>
+        <h3>Transportation & Logistics Application</h3>
+        <p>Developed application capabilities supporting truck drivers and organizations managing vendors, loads, and related transportation workflows.</p>
+        <p class="tags"><strong>Relevant capabilities:</strong> Application Development | Workflow Automation | Logistics Technology | Data Management</p>
+      </div>
+      <div class="perf-card">
+        <h3>Digital Account Management</h3>
+        <p>Developed functionality enabling customers to securely switch between business and personal account experiences within a digital platform.</p>
+        <p class="tags"><strong>Relevant capabilities:</strong> Authentication | Account Management | Customer Experience | Enterprise Web Development</p>
+      </div>
+      <div class="perf-card">
+        <h3>Digital Commerce Development</h3>
+        <p>Supported development of customer purchasing workflows and new functionality within a high-volume telecommunications commerce environment.</p>
+        <p class="tags"><strong>Relevant capabilities:</strong> E-Commerce | Full-Stack Development | Customer-Facing Applications | Enterprise Integration</p>
       </div>
     </div>
   </div>
 </section>
 
-<footer id="contact">
+<section id="contact" class="contact-section">
+  <div class="wrap contact-inner">
+    <span class="eyebrow">Contracting and teaming opportunities</span>
+    <h2>Available For</h2>
+    <ul class="opportunity-list">
+      <li>Federal prime contracting opportunities</li>
+      <li>Subcontracting and teaming arrangements</li>
+      <li>Small-business participation requirements</li>
+      <li>Software development work packages</li>
+      <li>Application modernization initiatives</li>
+      <li>Systems integration projects</li>
+      <li>AI and workflow automation projects</li>
+      <li>Technical surge support</li>
+    </ul>
+    <p class="lead">For contracting, subcontracting, RFIs, sources sought, or teaming discussions, reach out directly and we'll respond within one business day.</p>
+    <div class="contact-actions">
+      <a class="btn btn-primary" href="mailto:procurement@aurumequitylegacy.com?subject=Teaming%20Discussion%20Request">Email procurement@aurumequitylegacy.com</a>
+      <a class="btn btn-ghost" href="tel:+14043831519">Call (404) 383-1519</a>
+    </div>
+    <div class="contact-actions" style="margin-top:16px;">
+      <a class="btn btn-ghost" href="Aurum_Equity_Capability_Statement_v2.pdf" target="_blank" rel="noopener noreferrer">Download Capability Statement<span class="sr-only"> (opens PDF in a new tab)</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
   <div class="wrap footer-grid">
     <div class="footer-brand">Aurum Equity LLC</div>
     <div class="footer-meta">
@@ -342,8 +448,8 @@
       <span>CAGE 18U14</span>
       <span>UEI H2PBRHL3GT65</span>
       <span>WOSB — certification in process</span>
-      <span>procurement@aurumequitylegacy.com</span>
-      <span>(404) 383-1519</span>
+      <a href="mailto:procurement@aurumequitylegacy.com">procurement@aurumequitylegacy.com</a>
+      <a href="tel:+14043831519">(404) 383-1519</a>
       <span>&copy; Aurum Equity LLC</span>
     </div>
   </div>
