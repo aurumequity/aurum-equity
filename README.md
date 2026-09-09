@@ -19,6 +19,7 @@ Company overview and contracting information (UEI, CAGE, NAICS)
 Core capabilities by category
 Pactura.ai technology capability demonstration
 Relevant experience
+Where Aurum fits within prime and subcontracting relationships
 Capability statement download
 Contact and teaming information
 
