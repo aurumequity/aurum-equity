@@ -1,37 +1,28 @@
 # Aurum Equity LLC Website
 
-This repository contains the source code for the Aurum Equity LLC public website.
+Source for the public website of Aurum Equity LLC, a woman-owned small business in Birmingham, Alabama, focused on federal software modernization.
 
-Aurum Equity LLC provides software engineering, application modernization, systems integration, and technology support to government agencies and prime contractors.
+## Pages
 
-## Services Focus
+- `index.html`: hero, three starter offers, registration snapshot
+- `services.html`: starter offers with scope, deliverables, and timelines, plus supporting capabilities
+- `teaming.html`: how Aurum works with prime contractors, including the Where Aurum Fits content
+- `about.html`: how Aurum works, technical toolkit, standing, Key Personnel Experience
+- `contact.html`: inquiry form, capability statement download, direct contact
 
-Custom software development
-Systems integration
-Application modernization
-Technical operations and security readiness
+## Structure
 
-## Purpose of This Site
+- `styles.css`: shared styles (navy and gold system, self-hosted Public Sans and IBM Plex Mono from `assets/fonts/`)
+- `main.js`: nav toggle, Google Analytics events, contact form handling
+- `sitemap.xml`, `robots.txt`: search engine files
+- `Aurum_Equity_Capability_Statement_v3.pdf`: capability statement download
 
-The website provides:
-
-Company overview and contracting information (UEI, CAGE, NAICS)
-Core capabilities by category
-Pactura.ai technology capability demonstration
-Relevant experience
-Where Aurum fits within prime and subcontracting relationships
-Capability statement download
-Contact and teaming information
+Header and footer are repeated in each HTML file (no build step).
 
 ## Technology
 
-Static HTML and CSS
-Hosted using GitHub Pages
+Static HTML, CSS, and JavaScript. Hosted using GitHub Pages.
 
 ## Contact
 
-[procurement@aurumequitylegacy.com](mailto:procurement@aurumequitylegacy.com)
-
----
-
-This shows organization, professionalism, and technical credibility if anyone views the repository.
+[dominique.deamues@aurumequitylegacy.com](mailto:dominique.deamues@aurumequitylegacy.com)
