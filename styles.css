@@ -611,6 +611,12 @@ p + p {
     grid-template-columns: 1.15fr 0.85fr;
     gap: 64px;
   }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
   .nav-toggle {
     display: none;
   }
@@ -664,4 +670,9 @@ p + p {
     transition: none !important;
     animation: none !important;
   }
+}
+.logo img {
+  height: 44px;
+  width: auto;
+  display: block;
 }

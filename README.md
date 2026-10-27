@@ -15,7 +15,7 @@ Source for the public website of Aurum Equity LLC, a woman-owned small business 
 - `styles.css`: shared styles
 - `main.js`: nav toggle, Google Analytics events, contact form handling
 - `sitemap.xml`, `robots.txt`: search engine files
-- `Aurum_Equity_Capability_Statement_v2.pdf`: capability statement download
+- `Aurum_Equity_Capability_Statement_v3.pdf`: capability statement download
 
 Header and footer are repeated in each HTML file (no build step).
 
