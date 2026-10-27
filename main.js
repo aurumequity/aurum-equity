@@ -102,7 +102,7 @@
         'Error: ' +
           invalid.length +
           (invalid.length === 1 ? ' field needs' : ' fields need') +
-          ' attention. Please correct the marked fields and send again.'
+          ' attention. Please correct the marked fields and send again.',
       );
       invalid[0].focus();
       return;
@@ -110,7 +110,10 @@
     var data = new FormData(form);
     if (data.get('botcheck')) return; // honeypot filled, silently stop
     if (data.get('access_key') === KEY_PLACEHOLDER) {
-      show('error', 'Error: the form is not connected yet, so your message was not sent. ' + fallback);
+      show(
+        'error',
+        'Error: the form is not connected yet, so your message was not sent. ' + fallback,
+      );
       return;
     }
     var payload = {};
