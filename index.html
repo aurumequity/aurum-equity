@@ -1,455 +1,323 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aurum Equity LLC | Software Engineering and Technology Modernization</title>
-<meta name="description" content="Aurum Equity LLC provides software engineering, application modernization, systems integration, and technology support to government agencies and prime contractors. SAM.gov registered small business, NAICS 541511.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg: #faf7f1;
-    --bg-alt: #f2ede2;
-    --ink: #16202e;
-    --ink-soft: #4a5568;
-    --ink-muted: #7a8494;
-    --line: #e2dccd;
-    --brass: #9c7a2e;
-    --brass-deep: #7a5e21;
-    --brass-tint: #f1e6cc;
-    --navy: #16202e;
-    --white: #ffffff;
-    --radius: 6px;
-    --maxw: 1140px;
-    --serif: 'Fraunces', Georgia, serif;
-    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{
-    font-family:var(--sans);
-    color:var(--ink);
-    background:var(--bg);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{color:inherit;text-decoration:none;}
-  img{max-width:100%;display:block;}
-  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
-  .eyebrow{
-    font-size:12px;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    color:var(--brass-deep);
-    font-weight:600;
-  }
-  h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--navy);line-height:1.15;}
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:14px 26px;
-    border-radius:var(--radius);
-    font-size:15px;
-    font-weight:600;
-    cursor:pointer;
-    border:1px solid transparent;
-    transition:all .15s ease;
-  }
-  .btn-primary{background:var(--navy);color:var(--white);}
-  .btn-primary:hover{background:#0d1520;}
-  .btn-ghost{background:transparent;color:var(--navy);border-color:var(--navy);}
-  .btn-ghost:hover{background:var(--navy);color:var(--white);}
-
-  header{
-    position:sticky;top:0;z-index:50;
-    background:rgba(250,247,241,.92);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  nav{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:20px 0;
-  }
-  .logo{
-    font-family:var(--serif);
-    font-size:20px;
-    font-weight:600;
-    letter-spacing:.02em;
-  }
-  .logo span{color:var(--brass);}
-  .nav-links{display:flex;align-items:center;gap:32px;}
-  .nav-links a{font-size:14px;font-weight:500;color:var(--ink-soft);}
-  .nav-links a:hover{color:var(--navy);}
-  .nav-links a.nav-cta{font-size:14px;padding:10px 20px;color:var(--white);}
-  .nav-links a.nav-cta:hover{color:var(--white);}
-  .nav-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--navy);}
-
-  .hero{padding:96px 0 80px;}
-  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;}
-  .hero h1{font-size:clamp(32px,4.2vw,48px);margin:16px 0 20px;}
-  .hero p.lead{font-size:18px;color:var(--ink-soft);max-width:52ch;margin-bottom:32px;}
-  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:28px;}
-  .hero-note{font-size:13px;color:var(--ink-muted);border-left:2px solid var(--brass);padding-left:12px;}
-  .hero-panel{
-    background:var(--navy);
-    border-radius:12px;
-    padding:32px;
-    color:var(--white);
-  }
-  .hero-panel .tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#c9b880;margin-bottom:14px;display:block;}
-  .hero-panel h3{color:var(--white);font-size:20px;margin-bottom:16px;}
-  .scan-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:24px;}
-  .scan-list li{font-size:14px;color:#d7dbe2;display:flex;gap:10px;align-items:flex-start;}
-  .scan-list li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--brass);margin-top:7px;flex-shrink:0;}
-
-  .why-now{padding:64px 0;background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:36px;}
-  .why-grid{grid-template-columns:repeat(4,1fr);}
-  .stat-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px;}
-  .stat-card .num{font-family:var(--serif);font-size:22px;color:var(--brass-deep);margin-bottom:10px;}
-  .stat-card p{font-size:14px;color:var(--ink-soft);}
-
-  .industries{padding:88px 0;}
-  .section-head{max-width:60ch;margin-bottom:48px;}
-  .section-head h2{font-size:clamp(26px,3vw,34px);margin-top:12px;}
-  .section-head p{color:var(--ink-soft);margin-top:14px;font-size:16px;}
-  .industry-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;}
-  .industry-card{
-    border:1px solid var(--line);
-    border-radius:10px;
-    padding:28px 24px;
-    background:var(--white);
-    transition:border-color .15s ease;
-  }
-  .industry-card:hover{border-color:var(--card-accent, var(--brass));}
-  .industry-card .mark{
-    width:40px;height:40px;border-radius:50%;
-    background:var(--mark-bg, var(--brass-tint));
-    color:var(--mark-fg, var(--brass-deep));
-    display:flex;align-items:center;justify-content:center;
-    font-family:var(--serif);font-weight:600;font-size:15px;
-    margin-bottom:20px;
-  }
-  .industry-card.c1{--mark-bg:#f1e6cc;--mark-fg:#7a5e21;--card-accent:#9c7a2e;}
-  .industry-card.c2{--mark-bg:#dee8e5;--mark-fg:#204943;--card-accent:#2f6459;}
-  .industry-card.c3{--mark-bg:#f3e2da;--mark-fg:#8a4a30;--card-accent:#a8583f;}
-  .industry-card.c4{--mark-bg:#e2e6da;--mark-fg:#4b5a37;--card-accent:#6b7c4f;}
-  .industry-card h3{font-size:19px;margin-bottom:14px;}
-  .industry-card ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
-  .industry-card li{font-size:14px;color:var(--ink-soft);padding-left:16px;position:relative;}
-  .industry-card li::before{content:"—";position:absolute;left:0;color:var(--brass);}
-
-  .how{padding:88px 0;background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:48px;}
-  .how-step{position:relative;padding-left:0;}
-  .how-step .n{font-family:var(--serif);font-size:44px;color:var(--brass-tint);-webkit-text-stroke:1.5px var(--brass);display:block;margin-bottom:10px;}
-  .how-step h3{font-size:17px;margin-bottom:10px;}
-  .how-step p{font-size:14px;color:var(--ink-soft);}
-
-  .scan{padding:96px 0;}
-  .scan-card{
-    background:var(--navy);
-    border-radius:14px;
-    padding:56px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:48px;
-    align-items:center;
-  }
-  .scan-card h2{color:var(--white);font-size:clamp(24px,3vw,32px);margin-bottom:14px;}
-  .scan-card p{color:#c7cdd6;font-size:15px;margin-bottom:20px;}
-  .scan-card .btn-primary{background:var(--brass);}
-  .scan-card .btn-primary:hover{background:var(--brass-deep);}
-  .scan-card .btn-ghost{border-color:#ffffff40;color:var(--white);}
-  .scan-card .btn-ghost:hover{background:#ffffff15;}
-
-  .past-perf{padding:88px 0;}
-  .perf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:36px;}
-  .perf-card{border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:var(--white);}
-  .perf-card h3{font-size:16px;margin-bottom:10px;}
-  .perf-card p{font-size:14px;color:var(--ink-soft);}
-  .perf-card .tags{font-size:12px;color:var(--ink-muted);margin-top:14px;}
-  .perf-card .tags strong{color:var(--ink-soft);}
-
-  .contact-section{padding:80px 0;background:var(--bg-alt);border-top:1px solid var(--line);}
-  .contact-inner{max-width:640px;margin:0 auto;text-align:center;}
-  .contact-inner h2{margin-bottom:14px;}
-  .contact-inner p.lead{font-size:16px;color:var(--ink-soft);margin-bottom:32px;}
-  .contact-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
-  .icon-link{display:inline-flex;align-items:center;gap:6px;}
-  .icon-link svg{flex-shrink:0;}
-  .opportunity-list{list-style:none;display:inline-grid;grid-template-columns:1fr 1fr;gap:10px 32px;text-align:left;margin-bottom:32px;}
-  .opportunity-list li{font-size:14px;color:var(--ink-soft);padding-left:16px;position:relative;}
-  .opportunity-list li::before{content:"—";position:absolute;left:0;color:var(--brass);}
-
-  .prime-section{padding:72px 0;}
-  .prime-inner{max-width:720px;margin:0 auto;text-align:center;}
-  .prime-inner h2{margin-bottom:16px;}
-  .prime-inner p{font-size:16px;color:var(--ink-soft);margin-bottom:14px;}
-
-  footer{padding:48px 0;border-top:1px solid var(--line);}
-  .footer-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
-  .footer-meta{font-size:13px;color:var(--ink-muted);display:flex;gap:20px;flex-wrap:wrap;}
-  .footer-meta a:hover{color:var(--navy);text-decoration:underline;}
-  .footer-brand{font-family:var(--serif);font-size:16px;color:var(--navy);}
-
-  @media (max-width:1024px) and (min-width:861px){
-    .industry-grid{grid-template-columns:repeat(2,1fr);}
-    .perf-grid{grid-template-columns:1fr 1fr;}
-    .why-grid{grid-template-columns:repeat(2,1fr);}
-  }
-  @media (max-width:860px){
-    .nav-links{display:none;}
-    .nav-toggle{display:block;}
-    .hero-grid,.industry-grid,.how-grid,.stat-grid,.perf-grid,.why-grid{grid-template-columns:1fr;}
-    .opportunity-list{grid-template-columns:1fr;}
-    .scan-card{grid-template-columns:1fr;padding:32px;}
-    .hero{padding:56px 0;}
-    .wrap{padding:0 20px;}
-  }
-</style>
-</head>
-<body>
-
-<header>
-  <div class="wrap">
-    <nav>
-      <a class="logo" href="#">Aurum<span>·</span>Equity</a>
-      <div class="nav-links">
-        <a href="#capabilities">Capabilities</a>
-        <a href="#past-performance">Past Performance</a>
-        <a href="https://www.pactura.ai">Pactura.ai</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn-primary nav-cta" href="Aurum_Equity_Capability_Statement_v2.pdf" target="_blank" rel="noopener noreferrer">Capability Statement<span class="sr-only"> (opens PDF in a new tab)</span></a>
-      </div>
-      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">SAM.gov Registered Small Business | NAICS 541511, 541512, 541519</span>
-      <h1>Software Engineering, Systems Integration, and Application Modernization for Federal Missions</h1>
-      <p class="lead">Aurum Equity LLC provides software engineering, application modernization, systems integration, and technology support to government agencies and prime contractors. We help organizations modernize legacy applications, integrate disconnected systems, automate complex workflows, and build secure, maintainable software through security-conscious, documentation-driven delivery.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="Aurum_Equity_Capability_Statement_v2.pdf" target="_blank" rel="noopener noreferrer">Download Capability Statement<span class="sr-only"> (opens PDF in a new tab)</span></a>
-        <a class="btn btn-ghost" href="#contact">Discuss a Contract or Teaming Opportunity</a>
-      </div>
-      <p class="hero-note">Women-owned small business — SBA WOSB certification pending. UEI H2PBRHL3GT65.</p>
-    </div>
-    <div class="hero-panel">
-      <span class="tag">Contracting information</span>
-      <h3>Registration & capability snapshot</h3>
-      <ul class="scan-list">
-        <li>Legal Business Name: Aurum Equity LLC</li>
-        <li>UEI: H2PBRHL3GT65 &nbsp;|&nbsp; CAGE: 18U14</li>
-        <li>SAM.gov: Active</li>
-        <li>Primary NAICS: 541511 — Custom Computer Programming Services</li>
-        <li>Additional NAICS: 541512, 541519</li>
-        <li>Ownership: Woman-Owned &nbsp;|&nbsp; SBA WOSB Certification: Pending</li>
-      </ul>
-      <a class="btn btn-primary" href="#contact" style="width:100%;justify-content:center;">Request teaming discussion</a>
-    </div>
-  </div>
-</section>
-
-<section class="why-now">
-  <div class="wrap">
-    <span class="eyebrow">Why Aurum Equity</span>
-    <div class="stat-grid why-grid">
-      <div class="perf-card">
-        <h3>Senior-Level Technical Execution</h3>
-        <p>Aurum Equity brings hands-on software engineering experience across enterprise applications, customer-facing platforms, systems integration, analytics, and workflow automation.</p>
-      </div>
-      <div class="perf-card">
-        <h3>Agile Small-Business Delivery</h3>
-        <p>Our size enables direct access to senior technical leadership, rapid decision-making, and flexible execution while integrating efficiently with established program teams.</p>
-      </div>
-      <div class="perf-card">
-        <h3>Built for Teaming</h3>
-        <p>Aurum Equity can support prime contractors as a specialized software development and technology modernization subcontractor, including clearly scoped work packages and integrated development-team support.</p>
-      </div>
-      <div class="perf-card">
-        <h3>Documentation-Driven Delivery</h3>
-        <p>Technical documentation, implementation decisions, deployment procedures, and operational knowledge are captured throughout delivery rather than deferred until project closeout.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="industries" id="capabilities">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Core capabilities</h2>
-      <p>Practical, technically grounded offerings mapped to real procurement needs.</p>
-    </div>
-    <div class="industry-grid">
-      <div class="industry-card c1">
-        <div class="mark">01</div>
-        <h3>Custom Software Development</h3>
-        <ul>
-          <li>Full-stack application development</li>
-          <li>Java and Python development</li>
-          <li>Web applications and responsive user interfaces</li>
-          <li>REST APIs and web services</li>
-          <li>Database-backed applications</li>
-          <li>Legacy application enhancement</li>
-          <li>Software testing and defect remediation</li>
-        </ul>
-      </div>
-      <div class="industry-card c2">
-        <div class="mark">02</div>
-        <h3>Systems Integration</h3>
-        <ul>
-          <li>REST API development and integration</li>
-          <li>Data exchange and transformation</li>
-          <li>Enterprise system integration</li>
-          <li>Third-party service integration</li>
-          <li>Legacy-to-modern system connectivity</li>
-          <li>Workflow automation</li>
-          <li>Data validation and error handling</li>
-        </ul>
-      </div>
-      <div class="industry-card c3">
-        <div class="mark">03</div>
-        <h3>Application Modernization</h3>
-        <ul>
-          <li>Legacy system assessment and modernization</li>
-          <li>Application refactoring</li>
-          <li>Platform and architecture improvements</li>
-          <li>Technical debt reduction</li>
-          <li>Performance optimization</li>
-          <li>Maintainability and scalability improvements</li>
-          <li>Incremental modernization strategies</li>
-        </ul>
-      </div>
-      <div class="industry-card c4">
-        <div class="mark">04</div>
-        <h3>Technical Operations & Security Readiness</h3>
-        <ul>
-          <li>Application maintenance and troubleshooting</li>
-          <li>Incident analysis and remediation</li>
-          <li>Release and deployment support</li>
-          <li>Secure software development practices</li>
-          <li>Role-based access and authentication support</li>
-          <li>Accessibility-focused development and testing</li>
-          <li>Technical runbooks and knowledge transfer</li>
-          <li>SDLC and requirements traceability documentation</li>
-          <li>Support for security and authorization documentation requirements</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="scan" id="proof">
-  <div class="wrap">
-    <div class="scan-card" style="grid-template-columns:1fr;">
-      <div>
-        <h2>Proof of Delivery: Pactura.ai</h2>
-        <p>Aurum Equity designed and developed Pactura.ai, an AI-powered document intelligence platform that demonstrates our ability to take complex software from architecture through working production implementation.</p>
-        <p>The platform combines document ingestion, AI-assisted analysis, structured data extraction, workflow automation, and human review to support document-intensive business processes.</p>
-        <p>Pactura.ai demonstrates Aurum Equity's capabilities in full-stack development, artificial intelligence integration, API development, workflow automation, data processing, and secure application engineering.</p>
-        <div class="hero-actions" style="margin-bottom:0;">
-          <a class="btn btn-primary" href="https://www.pactura.ai">View Pactura.ai</a>
-          <a class="btn btn-ghost" href="#contact">Request a Technical Capability Briefing</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aurum Equity LLC | Federal Software Modernization</title>
+    <meta
+      name="description"
+      content="Compliance-ready modernization for federal agencies and prime contractors. Fixed-scope starter offers from a woman-owned small business in Birmingham, Alabama."
+    />
+    <link rel="canonical" href="https://www.aurumequitylegacy.com/" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta property="og:site_name" content="Aurum Equity LLC" />
+    <meta property="og:title" content="Aurum Equity LLC | Federal Software Modernization" />
+    <meta
+      property="og:description"
+      content="Compliance-ready modernization for federal agencies and prime contractors. Fixed-scope starter offers from a woman-owned small business in Birmingham, Alabama."
+    />
+    <meta property="og:url" content="https://www.aurumequitylegacy.com/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://www.aurumequitylegacy.com/Aurum-Equity-revamped-logo.png"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Aurum Equity LLC | Federal Software Modernization" />
+    <meta
+      name="twitter:description"
+      content="Compliance-ready modernization for federal agencies and prime contractors. Fixed-scope starter offers from a woman-owned small business in Birmingham, Alabama."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.aurumequitylegacy.com/Aurum-Equity-revamped-logo.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Aurum Equity LLC",
+        "alternateName": "Aurum Equity | Federal Software Modernization",
+        "url": "https://www.aurumequitylegacy.com/",
+        "logo": "https://www.aurumequitylegacy.com/Aurum-Equity-revamped-logo.png",
+        "email": "dominique.deamues@aurumequitylegacy.com",
+        "telephone": "+1-404-383-1519",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Birmingham",
+          "addressRegion": "AL",
+          "addressCountry": "US"
+        },
+        "sameAs": ["https://www.linkedin.com/company/aurumequity"],
+        "identifier": [
+          {
+            "@type": "PropertyValue",
+            "propertyID": "UEI",
+            "value": "H2PBRHL3GT65"
+          },
+          {
+            "@type": "PropertyValue",
+            "propertyID": "CAGE",
+            "value": "18U14"
+          }
+        ]
+      }
+    </script>
+    <!-- Google Analytics 4. Aurum-only property. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1M71FW3XW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-F1M71FW3XW');
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <div class="nav-bar">
+          <a class="logo" href="/" aria-label="Aurum Equity LLC home">Aurum<span>·</span>Equity</a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            Menu
+          </button>
         </div>
+        <nav aria-label="Primary">
+          <ul class="nav-links" id="site-nav">
+            <li><a href="/" aria-current="page">Home</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/teaming.html">Teaming</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li>
+              <a
+                class="btn btn-primary"
+                href="https://calendar.app.google/rzj8b952FR7ir2gK9"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-schedule
+                data-location="header"
+                >Schedule a 20-minute capability call<span class="sr-only">
+                  (opens in a new tab)</span
+                ></a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-    </div>
-  </div>
-</section>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-h">
+        <div class="wrap hero-grid">
+          <div>
+            <span class="eyebrow">Federal software modernization</span>
+            <h1 id="hero-h">Modernize legacy systems and deliver them audit-ready.</h1>
+            <p class="lead">
+              Aurum Equity LLC is a woman-owned small business led by a senior software engineer. We
+              help federal agencies and prime contractors modernize legacy applications with
+              documentation-driven delivery, so the work holds up in review.
+            </p>
+            <div class="actions">
+              <a
+                class="btn btn-primary"
+                href="https://calendar.app.google/rzj8b952FR7ir2gK9"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-schedule
+                data-location="hero"
+                >Schedule a 20-minute capability call<span class="sr-only">
+                  (opens in a new tab)</span
+                ></a
+              >
+              <a class="btn btn-ghost" href="services.html">See starter offers</a>
+            </div>
+            <p class="note">
+              Direct access to the principal engineer. Based in Birmingham, Alabama, near the
+              Huntsville and Redstone Arsenal federal corridor.
+            </p>
+          </div>
+          <div class="panel">
+            <span class="tag">Registration snapshot</span>
+            <h2>Ready to contract</h2>
+            <ul class="snapshot">
+              <li>Legal business name: Aurum Equity LLC</li>
+              <li>UEI: H2PBRHL3GT65. CAGE: 18U14</li>
+              <li>SAM.gov registration: Active</li>
+              <li>Primary NAICS: 541511 Custom Computer Programming Services</li>
+              <li>Additional NAICS: 541512, 541519</li>
+              <li>Ownership: Woman-owned small business. SBA WOSB certification is pending</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-<section class="past-perf" id="past-performance">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Track record</span>
-      <h2>Relevant experience</h2>
-    </div>
-    <div class="perf-grid">
-      <div class="perf-card">
-        <h3>High-Volume Telecommunications Web Platform</h3>
-        <p>Supported development and modernization of a customer-facing telecommunications platform serving more than 500,000 users. Contributed to application enhancements, site performance improvements, analytics integration, customer experience improvements, and production software support.</p>
-        <p class="tags"><strong>Relevant capabilities:</strong> Web Application Development · Application Modernization · Performance Optimization · Analytics Integration</p>
+      <section class="section section-alt" aria-labelledby="offers-h">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">Starter offers</span>
+            <h2 id="offers-h">Three clear ways to start working together</h2>
+            <p>
+              Each offer has a defined scope, defined deliverables, and a clear way to price it.
+              Pricing is shared on a call.
+            </p>
+          </div>
+          <div class="grid grid-3">
+            <article class="card">
+              <p class="meta">Fixed price. 2 to 3 weeks</p>
+              <h3>Legacy Application Assessment</h3>
+              <p>
+                A current-state review of one application, written risk findings, and a
+                modernization roadmap your team can act on.
+              </p>
+              <a class="btn btn-ghost" href="services.html#assessment"
+                >Scope and deliverables<span class="sr-only">
+                  for the Legacy Application Assessment</span
+                ></a
+              >
+            </article>
+            <article class="card">
+              <p class="meta">Fixed price</p>
+              <h3>ATO and Security Documentation Readiness Review</h3>
+              <p>
+                A gap analysis of your system against authorization documentation needs, with a
+                prioritized list of what to fix first.
+              </p>
+              <a class="btn btn-ghost" href="services.html#ato-readiness"
+                >Scope and deliverables<span class="sr-only">
+                  for the ATO and Security Documentation Readiness Review</span
+                ></a
+              >
+            </article>
+            <article class="card">
+              <p class="meta">Time and materials</p>
+              <h3>Technical Surge Support</h3>
+              <p>
+                A senior engineer embedded with your program team to add capacity where delivery is
+                behind or specialized skills are missing.
+              </p>
+              <a class="btn btn-ghost" href="services.html#surge"
+                >Scope and deliverables<span class="sr-only"> for Technical Surge Support</span></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="why-h">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">Why Aurum Equity</span>
+            <h2 id="why-h">Compliance-ready modernization</h2>
+          </div>
+          <div class="grid grid-3">
+            <div class="card">
+              <h3>Documentation-driven</h3>
+              <p>
+                Technical documentation, design decisions, and deployment procedures are written as
+                the work happens, not at closeout.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Senior engineer, direct access</h3>
+              <p>
+                You work with the principal engineer who scopes, builds, and reviews the work. There
+                is no hand-off layer.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Built for teaming</h3>
+              <p>
+                Aurum plugs into prime teams through defined work packages or embedded engineers.
+                See <a href="teaming.html">how teaming works</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="cta-h">
+        <div class="wrap">
+          <div class="cta-band">
+            <h2 id="cta-h">Talk to the principal engineer</h2>
+            <p>
+              Book a 20-minute capability call to discuss an opportunity, a teaming need, or one of
+              the starter offers.
+            </p>
+            <div class="actions">
+              <a
+                class="btn btn-brass"
+                href="https://calendar.app.google/rzj8b952FR7ir2gK9"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-schedule
+                data-location="home_bottom"
+                >Schedule a 20-minute capability call<span class="sr-only">
+                  (opens in a new tab)</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <p class="footer-brand">Aurum Equity LLC</p>
+          <p>Federal software modernization. Birmingham, Alabama.</p>
+          <p>UEI H2PBRHL3GT65. CAGE 18U14. NAICS 541511, 541512, 541519.</p>
+          <p>Woman-owned small business. SBA WOSB certification pending.</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/teaming.html">Teaming</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <ul class="footer-contact">
+          <li>
+            <a href="mailto:dominique.deamues@aurumequitylegacy.com"
+              >dominique.deamues@aurumequitylegacy.com</a
+            >
+          </li>
+          <li><a href="tel:+14043831519">(404) 383-1519</a></li>
+          <li>
+            <a
+              class="icon-link"
+              href="https://www.linkedin.com/company/aurumequity"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.558V9h3.556v11.452z"
+                /></svg
+              >LinkedIn<span class="sr-only"> (opens in a new tab)</span></a
+            >
+          </li>
+        </ul>
       </div>
-      <div class="perf-card">
-        <h3>Enterprise Analytics Platform</h3>
-        <p>Led development of an analytics solution designed to consolidate multiple sales and marketing reporting sources into a unified reporting environment. Provided technical leadership to an offshore development team and supported application architecture, integration, and implementation.</p>
-        <p class="tags"><strong>Relevant capabilities:</strong> Systems Integration · Analytics · Data Consolidation · Technical Leadership</p>
+      <div class="wrap">
+        <p class="copyright">© <span id="year">2026</span> Aurum Equity LLC</p>
       </div>
-      <div class="perf-card">
-        <h3>Transportation and Logistics Application</h3>
-        <p>Developed software capabilities supporting truck drivers and organizations managing vendors, loads, and operational transportation workflows.</p>
-        <p class="tags"><strong>Relevant capabilities:</strong> Custom Software Development · Workflow Automation · Logistics Technology · Data Management</p>
-      </div>
-      <div class="perf-card">
-        <h3>Digital Account Management</h3>
-        <p>Developed functionality enabling users to securely switch between business and personal account experiences within an enterprise digital platform.</p>
-        <p class="tags"><strong>Relevant capabilities:</strong> Account Management · Enterprise Web Development · Authentication Workflows · Customer Experience</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="contact-section">
-  <div class="wrap contact-inner">
-    <span class="eyebrow">Contracting and teaming opportunities</span>
-    <h2>Available For</h2>
-    <ul class="opportunity-list">
-      <li>Federal prime contracting opportunities</li>
-      <li>Subcontracting and teaming arrangements</li>
-      <li>Small-business participation requirements</li>
-      <li>Software development work packages</li>
-      <li>Application modernization initiatives</li>
-      <li>Systems integration projects</li>
-      <li>AI and workflow automation projects</li>
-      <li>Technical surge support</li>
-    </ul>
-    <p class="lead">For contracting, subcontracting, RFIs, sources sought, and teaming discussions, contact our procurement team directly.</p>
-    <div class="contact-actions">
-      <a class="btn btn-primary" href="mailto:procurement@aurumequitylegacy.com?subject=Teaming%20Discussion%20Request">Email procurement@aurumequitylegacy.com</a>
-      <a class="btn btn-ghost" href="tel:+14043831519">Call (404) 383-1519</a>
-      <a class="btn btn-ghost icon-link" href="https://www.linkedin.com/company/aurumequity" target="_blank" rel="noopener noreferrer">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.558V9h3.556v11.452z"/></svg>
-        LinkedIn<span class="sr-only"> (opens in a new tab)</span>
-      </a>
-    </div>
-    <div class="contact-actions" style="margin-top:16px;">
-      <a class="btn btn-ghost" href="Aurum_Equity_Capability_Statement_v2.pdf" target="_blank" rel="noopener noreferrer">Download Capability Statement<span class="sr-only"> (opens PDF in a new tab)</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="prime-section">
-  <div class="wrap prime-inner">
-    <h2>Where Aurum Fits</h2>
-    <p>Aurum Equity is well suited for software development, application modernization, systems integration, AI-enabled workflow automation, technical surge support, and defined subcontracting work packages within larger federal programs.</p>
-    <p>We can operate as an independent delivery partner or integrate with established program teams to support specific technical objectives.</p>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap footer-grid">
-    <div class="footer-brand">Aurum Equity LLC</div>
-    <div class="footer-meta">
-      <span>NAICS 541511, 541512, 541519</span>
-      <span>CAGE 18U14</span>
-      <span>UEI H2PBRHL3GT65</span>
-      <span>WOSB — certification in process</span>
-      <a href="mailto:procurement@aurumequitylegacy.com">procurement@aurumequitylegacy.com</a>
-      <a href="tel:+14043831519">(404) 383-1519</a>
-      <a class="icon-link" href="https://www.linkedin.com/company/aurumequity" target="_blank" rel="noopener noreferrer">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.558V9h3.556v11.452z"/></svg>
-        LinkedIn<span class="sr-only"> (opens in a new tab)</span>
-      </a>
-      <span>&copy; Aurum Equity LLC</span>
-    </div>
-  </div>
-</footer>
-
-</body>
+    </footer>
+    <script src="/main.js" defer></script>
+  </body>
 </html>
