@@ -7,12 +7,12 @@ Source for the public website of Aurum Equity LLC, a woman-owned small business 
 - `index.html`: hero, three starter offers, registration snapshot
 - `services.html`: starter offers with scope, deliverables, and timelines, plus supporting capabilities
 - `teaming.html`: how Aurum works with prime contractors, including the Where Aurum Fits content
-- `about.html`: the principal, credentials, Key Personnel Experience
+- `about.html`: how Aurum works, technical toolkit, standing, Key Personnel Experience
 - `contact.html`: inquiry form, capability statement download, direct contact
 
 ## Structure
 
-- `styles.css`: shared styles
+- `styles.css`: shared styles (navy and gold system, self-hosted Public Sans and IBM Plex Mono from `assets/fonts/`)
 - `main.js`: nav toggle, Google Analytics events, contact form handling
 - `sitemap.xml`, `robots.txt`: search engine files
 - `Aurum_Equity_Capability_Statement_v3.pdf`: capability statement download
