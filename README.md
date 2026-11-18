@@ -4,10 +4,11 @@ Source for the public website of Aurum Equity LLC, a woman-owned small business 
 
 ## Pages
 
-- `index.html`: hero, three starter offers, registration snapshot
-- `services.html`: starter offers with scope, deliverables, and timelines, plus supporting capabilities
+- `index.html`: hero, two fixed-price starter offers, registration snapshot
+- `services.html`: starter offers with price, scope, deliverables, and timelines, plus supporting capabilities
 - `teaming.html`: how Aurum works with prime contractors, including the Where Aurum Fits content
 - `about.html`: how Aurum works, technical toolkit, standing, Key Personnel Experience
+- `pactura.html`: Pactura.ai capability demonstration (Aurum's own product, not contract past performance)
 - `contact.html`: inquiry form, capability statement download, direct contact
 
 ## Structure
