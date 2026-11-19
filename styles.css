@@ -1270,3 +1270,778 @@ h2.title.first {
     animation: none !important;
   }
 }
+
+/* Approved federal technology visual system */
+:root {
+  --navy: #08182b;
+  --navy-deep: #040d18;
+  --navy-panel: #10233d;
+  --navy-line: #234667;
+  --navy-rule: #1d3854;
+  --ink: #f5f7fb;
+  --ink-soft: #c5d0df;
+  --gold: #e7bd53;
+  --gold-deep: #e7bd53;
+  --gold-dark: #f5d477;
+  --paper: #0a1a2c;
+  --line: #26405a;
+  --line-soft: #1a3048;
+  --mist: #c5d0df;
+  --mist-soft: #aebbd0;
+  --edge: #4c6b8f;
+  --field: #4c6b8f;
+}
+
+html {
+  scroll-padding-top: 20px;
+}
+
+body {
+  color: var(--white);
+  background:
+    radial-gradient(ellipse at 82% 0, rgba(16, 56, 95, 0.22), transparent 40%),
+    var(--navy-deep);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--white);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+a {
+  color: var(--gold);
+}
+
+a:hover {
+  color: var(--gold-dark);
+}
+
+:focus-visible {
+  outline-color: #69c8ff;
+  box-shadow: 0 0 0 5px rgba(4, 13, 24, 0.95), 0 0 0 8px #69c8ff;
+}
+
+.section {
+  color: var(--white);
+  background:
+    linear-gradient(135deg, rgba(10, 28, 48, 0.96), rgba(5, 17, 30, 0.98)),
+    url('/assets/circuit-lines.svg') right center / 560px auto no-repeat,
+    var(--navy-deep);
+}
+
+.section-paper {
+  background:
+    linear-gradient(135deg, rgba(12, 31, 52, 0.96), rgba(7, 21, 37, 0.98)),
+    url('/assets/circuit-lines.svg') right center / 560px auto no-repeat,
+    var(--navy);
+}
+
+.section-navy {
+  background: linear-gradient(120deg, #071629, #0d2542 60%, #071629);
+}
+
+.eyebrow,
+.section-navy .eyebrow,
+.on-dark .eyebrow,
+.kicker,
+.num,
+.panel h3,
+.datasheet h3,
+.tool-panel h2,
+.side-card h2,
+.direct h2 {
+  color: var(--gold);
+}
+
+.intro,
+.card p,
+.steps p,
+.split-main p,
+.service-main p,
+.col-main p,
+.profile-text p,
+.stack p,
+.tags,
+.table td,
+.datasheet dt,
+.field .hint,
+.req,
+.form-status,
+.field-error {
+  color: var(--mist);
+}
+
+.section-navy h2.title {
+  color: var(--white);
+}
+
+.btn-outline-gold {
+  border-color: var(--gold);
+  background: transparent;
+  color: var(--gold);
+}
+
+.btn-outline-gold:hover {
+  background: var(--gold);
+  color: var(--navy-deep);
+}
+
+.btn-navy {
+  background: #153252;
+  color: var(--white);
+}
+
+.btn-navy:hover {
+  background: #1b436b;
+}
+
+.site-header {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(231, 189, 83, 0.72);
+  background:
+    radial-gradient(ellipse at 85% 20%, rgba(12, 53, 89, 0.5), transparent 50%),
+    var(--navy);
+}
+
+.strip {
+  border-bottom: 1px solid var(--navy-line);
+  background: var(--navy-deep);
+  color: var(--mist);
+}
+
+.nav-bar {
+  border-bottom: 1px solid rgba(174, 187, 208, 0.28);
+}
+
+.nav-links a:not(.btn) {
+  color: var(--white);
+}
+
+.nav-links a:not(.btn):hover,
+.nav-links a[aria-current='page'] {
+  color: var(--gold);
+}
+
+.nav-toggle {
+  border-color: var(--edge);
+}
+
+.hero h1,
+.hero-sub h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.hero .lead {
+  color: var(--mist);
+}
+
+.hero-note {
+  color: var(--mist-soft);
+}
+
+.home-header {
+  background:
+    radial-gradient(ellipse at 80% 10%, rgba(9, 60, 106, 0.45), transparent 44%),
+    var(--navy-deep);
+}
+
+.home-header .hero {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.home-header .hero-main {
+  position: relative;
+  z-index: 0;
+  flex: none;
+  width: 100%;
+  max-width: 860px;
+  padding: 66px 0 52px;
+  isolation: isolate;
+}
+
+.home-header .hero-main::before,
+.home-header .hero-main::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: -1;
+  width: 100vw;
+  content: '';
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.home-header .hero-main::before {
+  background:
+    linear-gradient(90deg, rgba(4, 13, 24, 0.98) 0%, rgba(4, 13, 24, 0.9) 34%, rgba(4, 13, 24, 0.36) 72%, rgba(4, 13, 24, 0.18) 100%),
+    url('/assets/federal-capitol-hero.png') right center / auto 100% no-repeat,
+    var(--navy-deep);
+}
+
+.home-header .hero-main::after {
+  background: url('/assets/circuit-lines.svg') right center / auto 100% no-repeat;
+  opacity: 0.36;
+}
+
+.home-header .hero h1 {
+  max-width: 690px;
+  font-size: clamp(38px, 5vw, 64px);
+}
+
+.home-header .hero .lead {
+  max-width: 620px;
+}
+
+.home-header .snapshot {
+  flex: none;
+  width: 100%;
+  padding: 20px 0 22px;
+  border: 0;
+  border-top: 1px solid rgba(231, 189, 83, 0.74);
+  border-radius: 0;
+  background: linear-gradient(90deg, rgba(5, 15, 27, 0.95), rgba(9, 27, 46, 0.88));
+}
+
+.home-header .snapshot h2 {
+  margin-bottom: 12px;
+  color: var(--gold);
+}
+
+.home-header .facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px 22px;
+}
+
+.home-header .facts > div {
+  display: block;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
+.home-header .facts > div.wide:first-child {
+  grid-column: span 1;
+}
+
+.home-header .facts > div:nth-child(9) {
+  grid-column: 1 / -1;
+}
+
+.home-header .facts dt {
+  font-size: 13px;
+  color: var(--mist-soft);
+}
+
+.home-header .facts dd {
+  margin-top: 2px;
+  color: var(--white);
+  text-align: left;
+}
+
+.home-header .snapshot .link-gold {
+  margin-top: 8px;
+}
+
+.snapshot,
+.card,
+.datasheet,
+.tool-panel,
+.note,
+.side-card,
+.form,
+.table-wrap {
+  color: var(--white);
+  border-color: var(--navy-line);
+  background: linear-gradient(150deg, rgba(16, 35, 61, 0.98), rgba(8, 24, 42, 0.98));
+}
+
+.card h3,
+.steps h3,
+.stack h3 {
+  color: var(--white);
+}
+
+.card h3,
+.card h3.large {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.badge {
+  background: var(--gold);
+  color: var(--navy-deep);
+}
+
+.badge-outline {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.offer-foot,
+.steps li {
+  border-color: var(--navy-line);
+}
+
+.steps li {
+  border-top-color: var(--gold);
+}
+
+.checks li::before {
+  filter: brightness(0) saturate(100%) invert(83%) sepia(43%) saturate(718%) hue-rotate(354deg) brightness(96%) contrast(91%);
+}
+
+.split-aside,
+.panel,
+.tool-panel,
+.side-card {
+  border: 1px solid var(--navy-line);
+  background: linear-gradient(150deg, rgba(16, 35, 61, 0.96), rgba(8, 24, 42, 0.98));
+  color: var(--white);
+}
+
+.panel h3,
+.tool-panel h2,
+.side-card h2 {
+  color: var(--gold);
+}
+
+.table thead tr {
+  background: #10233d;
+}
+
+.table tbody tr,
+.datasheet dl > div {
+  border-color: var(--navy-line);
+}
+
+.table td:last-child,
+.datasheet dd,
+.datasheet dt,
+.datasheet h3 {
+  color: var(--white);
+}
+
+.service-main .timeline strong {
+  color: var(--gold);
+}
+
+.field input,
+.field select,
+.field textarea {
+  border-color: var(--edge);
+  background: #061423;
+  color: var(--white);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--mist-soft);
+}
+
+.field input[aria-invalid='true'],
+.field select[aria-invalid='true'],
+.field textarea[aria-invalid='true'] {
+  border-color: #ff8e8e;
+}
+
+.field-error {
+  color: #ffb0b0;
+}
+
+.form-status.success {
+  border-color: #6dba8c;
+  background: #0d3227;
+  color: #d3f4df;
+}
+
+.form-status.error {
+  border-color: #ec8585;
+  background: #3a1820;
+  color: #ffe0e0;
+}
+
+.direct {
+  border: 1px solid var(--navy-line);
+  background: #071629;
+}
+
+.direct a:not(.link-gold) {
+  color: var(--white);
+}
+
+.site-footer {
+  border-top: 1px solid var(--navy-line);
+  background: #030b14;
+}
+
+.capability-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(130deg, rgba(5, 16, 29, 0.96), rgba(8, 25, 43, 0.95)),
+    url('/assets/circuit-lines.svg') center / 620px auto repeat,
+    var(--navy-deep);
+}
+
+.capability-section .intro {
+  color: var(--mist);
+}
+
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.capability-card {
+  position: relative;
+  display: flex;
+  min-height: 270px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid #2877aa;
+  border-radius: 8px;
+  background:
+    linear-gradient(155deg, rgba(14, 42, 69, 0.98), rgba(6, 21, 37, 0.98)),
+    url('/assets/circuit-lines.svg') right bottom / 220px auto no-repeat;
+  box-shadow: inset 0 1px rgba(93, 177, 235, 0.12), 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.capability-card::after {
+  position: absolute;
+  right: -42px;
+  bottom: -60px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(26, 160, 231, 0.28);
+  border-radius: 50%;
+  content: '';
+  box-shadow: 0 0 0 14px rgba(26, 160, 231, 0.05), 0 0 0 28px rgba(26, 160, 231, 0.04);
+  pointer-events: none;
+}
+
+.capability-icon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid #35b8f2;
+  border-radius: 8px;
+  color: #51caff;
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 600;
+  text-shadow: 0 0 16px rgba(40, 183, 255, 0.65);
+}
+
+.capability-card h3 {
+  max-width: 22ch;
+  font-size: 20px;
+  line-height: 1.18;
+}
+
+.capability-card p {
+  color: var(--mist);
+}
+
+.capability-card a {
+  z-index: 1;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin-top: auto;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.capability-card a::after {
+  margin-left: 9px;
+  color: var(--gold);
+  content: '→';
+}
+
+.experience-section {
+  background:
+    linear-gradient(130deg, rgba(5, 16, 29, 0.98), rgba(11, 29, 48, 0.97)),
+    url('/assets/circuit-lines.svg') right top / 500px auto no-repeat,
+    var(--navy-deep);
+}
+
+.experience-section .card-grid.wide {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.experience-card {
+  min-width: 0;
+  gap: 12px;
+  padding: 14px;
+  overflow: hidden;
+  border-color: #41617f;
+  border-radius: 8px;
+  background: linear-gradient(150deg, rgba(16, 35, 61, 0.99), rgba(8, 24, 42, 0.99));
+}
+
+.experience-image {
+  width: calc(100% + 28px);
+  aspect-ratio: 2.4 / 1;
+  margin: -14px -14px 0;
+  border-bottom: 1px solid rgba(231, 189, 83, 0.5);
+  background-position: center;
+  background-size: cover;
+}
+
+.experience-telecommunications .experience-image {
+  background-image: url('/assets/experience-telecommunications.png');
+}
+
+.experience-analytics .experience-image {
+  background-image: url('/assets/experience-analytics.png');
+}
+
+.experience-logistics .experience-image {
+  background-image: url('/assets/experience-logistics.png');
+}
+
+.experience-account-management .experience-image {
+  background-image: url('/assets/experience-account-management.png');
+}
+
+.experience-card h3 {
+  font-size: 18px;
+}
+
+.experience-card .tags {
+  color: var(--gold);
+  font-size: 13px;
+}
+
+.pactura-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 76% 45%, rgba(0, 108, 191, 0.24), transparent 42%),
+    linear-gradient(110deg, #071629, #0a2039 58%, #061423);
+}
+
+.pactura-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.85fr);
+  align-items: center;
+  gap: 50px;
+}
+
+.pactura-layout .title {
+  max-width: 690px;
+}
+
+.pactura-layout .intro {
+  margin-bottom: 24px;
+}
+
+.pactura-checks {
+  margin-bottom: 28px;
+}
+
+.pactura-checks li::before {
+  filter: brightness(0) saturate(100%) invert(81%) sepia(26%) saturate(900%) hue-rotate(181deg);
+}
+
+.workflow-visual {
+  position: relative;
+  display: flex;
+  min-height: 280px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 30px;
+  overflow: hidden;
+  border: 1px solid #24669c;
+  border-radius: 12px;
+  background:
+    linear-gradient(rgba(7, 23, 41, 0.68), rgba(7, 23, 41, 0.9)),
+    url('/assets/circuit-lines.svg') center / cover,
+    #071629;
+  box-shadow: inset 0 0 50px rgba(0, 133, 220, 0.12), 0 18px 48px rgba(0, 0, 0, 0.22);
+}
+
+.workflow-node {
+  display: grid;
+  width: 130px;
+  min-height: 100px;
+  place-items: center;
+  padding: 14px;
+  border: 1px solid #3475a4;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #123354, #0a1b30);
+  color: var(--white);
+  font-weight: 700;
+  text-align: center;
+}
+
+.workflow-ai {
+  border-color: #2ab8f5;
+  box-shadow: 0 0 24px rgba(42, 184, 245, 0.2);
+}
+
+.workflow-arrow {
+  color: #45c3ff;
+  font-size: 24px;
+}
+
+.contact-showcase {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-top: 1px solid rgba(231, 189, 83, 0.75);
+  background: #061426;
+}
+
+.contact-showcase::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(4, 13, 24, 0.05) 0, rgba(4, 13, 24, 0.94) 27%, rgba(4, 13, 24, 0.84) 100%),
+    url('/assets/federal-columns.png') left center / auto 100% no-repeat,
+    url('/assets/circuit-lines.svg') right center / 420px auto no-repeat;
+  content: '';
+}
+
+.contact-showcase-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(230px, 0.9fr) minmax(230px, 0.9fr);
+  align-items: center;
+  gap: 32px;
+  max-width: 1300px;
+  padding-top: 54px;
+  padding-bottom: 54px;
+  text-align: left;
+}
+
+.contact-showcase-grid h2 {
+  margin: 8px 0 12px;
+  font-size: clamp(27px, 3vw, 38px);
+  line-height: 1.12;
+}
+
+.contact-showcase-grid p:not(.eyebrow) {
+  margin-bottom: 20px;
+  color: var(--mist);
+}
+
+.contact-showcase-details {
+  display: flex;
+  min-height: 110px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 24px;
+  border-left: 1px solid var(--gold);
+  color: var(--white);
+  overflow-wrap: anywhere;
+}
+
+.contact-showcase-details h3 {
+  margin-bottom: 4px;
+  color: var(--gold);
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-showcase-details a {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.contact-showcase-details a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 1000px) {
+  .capability-grid,
+  .experience-section .card-grid.wide {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-showcase-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.8fr);
+  }
+
+  .contact-showcase-grid > :first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-header .hero-main {
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
+
+  .home-header .hero-main::before {
+    background:
+      linear-gradient(90deg, rgba(4, 13, 24, 0.97), rgba(4, 13, 24, 0.72)),
+      url('/assets/federal-capitol-hero.png') 62% center / auto 100% no-repeat,
+      var(--navy-deep);
+  }
+
+  .home-header .facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-header .facts > div:nth-child(9) {
+    grid-column: 1 / -1;
+  }
+
+  .capability-grid,
+  .experience-section .card-grid.wide,
+  .pactura-layout,
+  .contact-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-card {
+    min-height: 230px;
+  }
+
+  .contact-showcase-grid > :first-child {
+    grid-column: auto;
+  }
+
+  .contact-showcase-details {
+    min-height: 0;
+    padding: 16px 0 0;
+    border-top: 1px solid var(--gold);
+    border-left: 0;
+  }
+
+  .workflow-visual {
+    min-height: 220px;
+    gap: 8px;
+    padding: 18px;
+  }
+
+  .workflow-node {
+    width: 100px;
+    min-height: 84px;
+    padding: 8px;
+    font-size: 14px;
+  }
+}
